@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import my_restaurants from "./Data/restaurants.json";
+import { Restaurant } from "./Interfaces/restaurant";
+import { RestaurantList } from "./Components/RestaurantList";
+
+const RESTAURANTS = my_restaurants.map(
+    (theRest): Restaurant => ({
+        ...theRest
+    })
+);
 
 function App(): JSX.Element {
+    const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -13,6 +24,7 @@ function App(): JSX.Element {
             </p>
             <p>Mycahs first commit</p>
             <p>testing branch out</p>
+            <RestaurantList restaurants={restaurants}></RestaurantList>
         </div>
     );
 }
