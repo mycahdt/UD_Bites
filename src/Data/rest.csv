@@ -1,0 +1,93 @@
+name,location,price,sitdown,bar,boba,coffee,pizza,dessert,asian
+Grain Craft Bar + Kitchen,Main Street,$$,true,true,false,false,false,false,false
+Bing's Bakery,Main Street,$$,false,false,false,false,false,false,false
+Pobu,Main Street,$,false,false,false,false,false,false,true
+Banh Mi Boy,Main Street,$,false,false,true,false,false,false,true
+Season's Pizza,Main Street,$,false,false,false,false,true,false,false
+Papa Johns Pizza,Main Street,$,false,false,false,false,true,false,false
+Sinclair's Cafe Ltd,Main Street,$,true,false,false,false,false,false,false
+Ali Baba Mid Eastern Restaurant,Main Street,$$,true,false,false,false,false,false,false
+Kakure Bistro,Main Street,$$,true,false,false,false,false,false,true
+Ramen Kumamoto,Main Street,$$,true,false,false,false,false,false,true
+Santa Fe Mexican Grill,Main Street,$$,true,false,false,false,false,false,false
+Main Street Subs / Freddy's Wings,Main Street,$,false,false,false,false,false,false,false
+Oishii Ocean Japanese & Cajun Seafood,Main Street,$$,true,false,false,false,false,false,true
+2SPizza,Main Street,$$,false,false,false,false,true,false,false
+Bowba Cha Bubble Tea,Main Street,$,false,false,true,false,false,false,true
+Iron Hill Brewery & Restaurant,Main Street,$$,true,false,false,false,false,false,false
+Klondike Kate's Restaurant & Saloon,Main Street,$$,true,true,false,false,false,false,false
+Starbucks,Main Street,$$,false,false,false,true,false,false,false
+Little Goat Coffee Roasting Co,Haines Street,$,false,false,false,true,false,false,false
+Chipotle Mexican Grill,Main Street,$,false,false,false,false,false,false,false
+Playa Bowls,Main Street,$$,false,false,false,false,false,false,false
+Tasty Wok,Main Street,$,false,false,false,false,false,false,true
+Home Grown,Main Street,$,true,true,false,false,false,false,false
+Five Guys,Main Street,$$,false,false,false,false,false,false,false
+MOCHINUT,Main Street,$,false,false,true,false,false,true,false
+The Original Hot Bagels,Main Street,$,false,false,false,false,false,false,false
+Roots Natural Kitchen,Main Street,$,false,false,false,false,false,false,false
+Oishii Sushi & Ramen,Main Street,$$,true,false,false,false,false,false,true
+El Diablo Burritos,Main Street,$,false,false,false,false,false,false,false
+Taverna Newark,Main Street,$,true,false,false,false,false,false,false
+Stone Balloon Ale House,Main Street,$$,true,false,false,false,false,false,false
+Chef Tan,Main Street,$$,true,false,false,false,false,false,true
+Tbaar,Main Street,$,false,false,true,false,false,false,true
+Hamilton's on Main,Main Street,$$,true,false,false,false,false,false,false
+Kung Fu Tea,Main Street,$,false,false,true,false,false,false,true
+Surreal Creamery,Main Street,$,false,false,true,false,false,true,false
+UDairy Creamery Cafe,Main Street,$,false,false,false,false,false,true,false
+Caffe Gelato,Main Street,$$$,true,false,false,false,false,false,false
+The Peach Blossom Eatery,Main Street,$$,true,false,false,true,false,false,false
+Comma Cafe,Main Street,$,false,false,true,false,false,false,false
+Indian Sizzler,Main Street,$$,true,false,false,false,false,false,true
+Insomnia Cookies,Main Street,$$,false,false,false,false,false,false,false
+Coloful Yun Nan,Main Street,$$,false,false,false,false,false,false,true
+Dunkin',Main Street,$,false,false,false,true,false,false,false
+Brew HaHa!,Main Street,$,false,false,false,true,false,false,false
+Grotto Pizza,Main Street,$$,true,true,false,false,true,false,false
+Snap Custom Pizza and Salads,Main Street,$,false,false,false,false,true,false,false
+m2o Burgers & Salads,Main Street,$$,false,false,false,false,false,false,false
+Newark Deli & Bagels,Main Street,$,false,false,false,false,false,false,false
+Deer Park Tavern,Main Street,$$,true,true,false,false,false,false,false
+Vita Nova,Trabant,$$$,true,false,false,false,false,false,false
+Stomping Grounds ft. Little Goat Coffee Roasting CO,Trabant,$,false,false,false,true,false,false,false
+Chick-fil-A,Trabant,$,false,false,false,false,false,false,false
+Quiznos,Trabant,$,false,false,false,false,false,false,false
+Claymont,Trabant,$,false,false,false,false,false,false,false
+Greens to Go,Trabant,$,false,false,false,false,false,false,false
+International Food Creations,Trabant,$,false,false,false,false,false,false,true
+Drip Cafe,N College Ave,$$,false,false,false,true,false,false,false
+Domino's Pizza,N College Ave,$,false,false,false,false,true,false,false
+Ecogrounds,Smith Hall,$,false,false,false,true,false,false,false
+The Nest,Morris Library,$,false,false,false,true,false,false,false
+Dunkin',Perkins,$,false,false,false,true,false,false,false
+Flip Kitchen,Perkins,$,false,false,false,false,false,false,false
+DE Slider Co,Perkins,$$,false,false,false,false,false,false,false
+The Den,Perkins,$$,false,false,false,false,false,false,false
+Desserts by Dana,Perkins,$,false,false,false,false,false,true,false
+Einstein Bros. Bagels,Academy St,$,false,false,false,true,false,false,false
+Claymont Steak Shop,S Main Street ,$,false,false,false,false,false,false,false
+Bing's Bake & Brew,S Main Street ,$,false,false,false,true,false,false,false
+Tastea 101,Carroll Ct,$,false,false,true,false,false,false,true
+Buffalo Wild Wings,S Main Street ,$$,true,false,false,false,false,false,false
+Atexquita Restaurant Mexican Grill & Bar,S Main Street ,$$,false,true,false,false,false,false,false
+Cafeneo,S Main Street ,$,false,false,false,true,false,false,false
+Pat's Pizza & Pasta,S Main Street ,$,false,false,false,false,true,false,false
+Barley Craft Beer and Whiskey Bar,S Main Street ,$$,true,true,false,false,false,false,false
+bb.q Chicken South Main St Plaza,S Main Street ,$,false,false,false,false,false,false,true
+TIGER SUGER,S Main Street ,$,false,false,true,false,false,false,true
+The Green Turtle Sports Bar & Grille,S Main Street ,$$,true,true,false,false,false,false,false
+D.P. Dough Newark ,S Main Street ,$,false,false,false,false,false,false,false
+Kong Pao Palace,S Main Street ,$$,false,false,false,false,false,false,true
+Margherita's Pizza,S Main Street ,$,false,false,false,false,true,false,false
+Wayback Burger,S Main Street ,$$,false,false,false,false,false,false,false
+Wingstop,Newark Shopping Center,$$,false,false,false,false,false,false,false
+Kung Fu Hot Pot,Newark Shopping Center,$$,true,false,false,false,false,false,true
+Capriotti's Sandwich Shop,Newark Shopping Center,$,false,false,false,false,false,false,false
+QualiTea,Newark Shopping Center,$,false,false,true,false,false,false,true
+Rita's Italian Ice & Frozen Custard,Newark Shopping Center,$,false,false,false,false,false,true,false
+No. 1 Chinese,Newark Shopping Center,$,false,false,false,false,false,false,true
+Poke Bros,Newark Shopping Center,$$,false,false,false,false,false,false,true
+Pho Ever Cafe,Newark Shopping Center,$$,false,false,true,false,false,false,true
+Mayflower Japanese,Newark Shopping Center,$,false,false,false,false,false,false,true
+Big Z Pizza,Newark Shopping Center,$,false,false,false,false,true,false,false
