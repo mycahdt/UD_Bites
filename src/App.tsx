@@ -3,6 +3,7 @@ import "./App.css";
 import my_restaurants from "./Data/restaurants.json";
 import { Restaurant } from "./Interfaces/restaurant";
 import { RestaurantList } from "./Components/RestaurantList";
+import { Form } from "react-bootstrap";
 
 const RESTAURANTS = my_restaurants.map(
     (theRest): Restaurant => ({
@@ -12,6 +13,16 @@ const RESTAURANTS = my_restaurants.map(
 
 function App(): JSX.Element {
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
+    const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
+    const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
+
+    const asianRestaurants = restaurants.filter(
+        (restaurant: Restaurant): boolean => restaurant.asian
+    );
+
+    const sitdownRestaurants = restaurants.filter(
+        (restaurant: Restaurant): boolean => restaurant.sitdown
+    );
 
     return (
         <div className="App">
@@ -24,7 +35,33 @@ function App(): JSX.Element {
             </p>
             <p>Mycahs first commit</p>
             <p>testing branch out</p>
-            <RestaurantList restaurants={restaurants}></RestaurantList>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-sitdown"
+                    label="Sitdown"
+                    name="sitdown"
+                    checked={onlySitdown}
+                    onClick={() => setOnlySitdown(!onlySitdown)}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-asian"
+                    label="Asian"
+                    name="asian"
+                    checked={onlyAsian}
+                    onClick={() => setOnlyAsian(!onlyAsian)}
+                />
+            </div>
+            <RestaurantList
+                restaurants={restaurants}
+                asianRestaurants={asianRestaurants}
+                onlyAsian={onlyAsian}
+                sitdownRestaurants={sitdownRestaurants}
+                onlySitdown={onlySitdown}
+            ></RestaurantList>
         </div>
     );
 }
