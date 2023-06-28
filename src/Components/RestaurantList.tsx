@@ -5,21 +5,28 @@ import { RestaurantView } from "./RestaurantView";
 
 export function RestaurantList({
     restaurants,
-    //asianRestaurants,
-    //onlyAsian,
-    //sitdownRestaurants,
-    //onlySitdown,
-    filterList
+    filterList,
+    chosenLocation
 }: {
     restaurants: Restaurant[];
-    //asianRestaurants: Restaurant[];
-    //onlyAsian: boolean;
-    //sitdownRestaurants: Restaurant[];
-    //onlySitdown: boolean;
     filterList: string[];
+    chosenLocation: string;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
+
+        /*
+        console.log("HEREEEEE");
+        console.log(chosenLocation);
+
+        if (chosenLocation === "Perkins") {
+            console.log("Clicked perkins!");
+            console.log(currentRestaurants[65].location);
+            if (currentRestaurants[65].location === chosenLocation) {
+                console.log("Your answer is here");
+            }
+        }*/
+
         for (let i = 0; i < filterList.length; i++) {
             if (filterList[i] === "asian") {
                 currentRestaurants = currentRestaurants.filter(
@@ -51,11 +58,80 @@ export function RestaurantList({
                 );
             }
         }
+
+        if (chosenLocation !== "None" && chosenLocation !== "Other Locations") {
+            console.log("It is not non and not other locations!!!!");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    restaurant.location === chosenLocation
+            );
+        } else if (chosenLocation === "Other Locations") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    restaurant.location !== "Main Street" &&
+                    restaurant.location !== "Trabant" &&
+                    restaurant.location !== "Perkins" &&
+                    restaurant.location !== "S Main Street" &&
+                    restaurant.location !== "Newark Shopping Center"
+            );
+        }
+
+        if (
+            filterList.includes("lowprice") &&
+            filterList.includes("midprice") &&
+            filterList.includes("highprice")
+        ) {
+            console.log("All prices");
+            return currentRestaurants;
+        } else if (
+            filterList.includes("lowprice") &&
+            filterList.includes("midprice")
+        ) {
+            console.log("$ and $$");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    restaurant.price === "$" || restaurant.price === "$$"
+            );
+        } else if (
+            filterList.includes("lowprice") &&
+            filterList.includes("highprice")
+        ) {
+            console.log("$ and $$$");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    restaurant.price === "$" || restaurant.price === "$$$"
+            );
+        } else if (
+            filterList.includes("midprice") &&
+            filterList.includes("highprice")
+        ) {
+            console.log("$$ and $$$");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    restaurant.price === "$$" || restaurant.price === "$$$"
+            );
+        } else if (filterList.includes("lowprice")) {
+            console.log("Just $");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.price === "$"
+            );
+        } else if (filterList.includes("midprice")) {
+            console.log("Just $$");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.price === "$$"
+            );
+        } else if (filterList.includes("highprice")) {
+            console.log("Just $$$");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.price === "$$$"
+            );
+        }
+
         return currentRestaurants;
     }
     const finalRestaurants = allFilters();
 
-    return filterList.length > 0 ? (
+    return filterList.length > 0 || chosenLocation != "None" ? (
         <div>
             <Stack gap={3}>
                 {finalRestaurants.map((restaurant: Restaurant) => (
