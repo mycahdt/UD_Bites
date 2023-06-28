@@ -15,107 +15,73 @@ function App(): JSX.Element {
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
     const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
     const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
+    const [onlyBar, setOnlyBar] = useState<boolean>(false);
+    const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
+    const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
+    const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
+    const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
     const [filterList, setFilterList] = useState<string[]>([]);
 
     function updateFilters(event: React.ChangeEvent<HTMLInputElement>) {
         const myFilter = event.target.value;
-        // Check if the emotion is already present
         if (filterList.includes(myFilter)) {
-            // Remove the given value
             setFilterList(filterList.filter((myFil) => myFil !== myFilter));
         } else {
-            // Append the given value
             setFilterList([...filterList, myFilter]);
         }
     }
 
+    /*
     const asianRestaurants = restaurants.filter(
         (restaurant: Restaurant): boolean => restaurant.asian
-    );
+    );*/
 
     function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyAsian(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
-
-        /*
-        const flag = filterList.indexOf("asian");
-        if (onlyAsian) {
-            if (flag < 0) {
-                setFilterList((prevFilters) => [...prevFilters, "asian"]);
-            }
-        } else {
-            if (flag >= 0) {
-                filterList.filter(
-                    (myFilter: string): boolean => myFilter !== "asian"
-                );
-            }
-        }*/
     }
 
     /*
-    function asianFn2() {
-        const flag = filterList.indexOf("asian");
-        if (onlyAsian && flag === -1) {
-            setFilterList((prevFilters) => [...prevFilters, "asian"]);
-        } else if (!onlySitdown) {
-            setFilterList(
-                filterList.filter(
-                    (myFilter: string): boolean => myFilter !== "asian"
-                )
-            );
-        }
-    }*/
-
     const sitdownRestaurants = restaurants.filter(
         (restaurant: Restaurant): boolean => restaurant.sitdown
-    );
+    );*/
 
     function sitdownFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlySitdown(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
-
-        /*
-        const flag = filterList.indexOf("sitdown");
-        if (onlySitdown) {
-            if (flag < 0) {
-                setFilterList((prevFilters) => [...prevFilters, "sitdown"]);
-            }
-        } else {
-            if (flag >= 0) {
-                filterList.filter(
-                    (myFilter: string): boolean => myFilter !== "sitdown"
-                );
-            }
-        }*/
-        /*
-        if (onlySitdown && flag === -1) {
-            setFilterList((prevFilters) => [...prevFilters, "sitdown"]);
-            console.log("sitdown was clicked");
-        } else if (!onlySitdown) {
-            setFilterList(
-                filterList.filter(
-                    (myFilter: string): boolean => myFilter !== "sitdown"
-                )
-            );
-        }*/
     }
 
-    /*
-    function sitdownFn2() {
-        const flag = filterList.indexOf("sitdown");
-        if (onlySitdown && flag === -1) {
-            setFilterList((prevFilters) => [...prevFilters, "sitdown"]);
-            console.log("sitdown was clicked");
-        } else if (!onlySitdown) {
-            setFilterList(
-                filterList.filter(
-                    (myFilter: string): boolean => myFilter !== "sitdown"
-                )
-            );
-        }
-    }*/
+    function barFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBar(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function bobaFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBoba(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function coffeeFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyCoffee(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyPizza(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function dessertFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyDessert(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
 
     return (
         <div className="App">
@@ -137,8 +103,6 @@ function App(): JSX.Element {
                     value="sitdown"
                     checked={onlySitdown}
                     onChange={sitdownFn}
-                    //onChange={() => sitdownFn()}
-                    //onClick={() => sitdownFn2()}
                 />
             </div>
             <div>
@@ -150,7 +114,61 @@ function App(): JSX.Element {
                     value="asian"
                     checked={onlyAsian}
                     onChange={asianFn}
-                    //onClick={() => asianFn2()}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-bar"
+                    label="Bar"
+                    name="bar"
+                    value="bar"
+                    checked={onlyBar}
+                    onChange={barFn}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-boba"
+                    label="Boba"
+                    name="boba"
+                    value="boba"
+                    checked={onlyBoba}
+                    onChange={bobaFn}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-coffee"
+                    label="Coffee"
+                    name="coffee"
+                    value="coffee"
+                    checked={onlyCoffee}
+                    onChange={coffeeFn}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-pizza"
+                    label="Pizza"
+                    name="pizza"
+                    value="pizza"
+                    checked={onlyPizza}
+                    onChange={pizzaFn}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-dessert"
+                    label="Dessert"
+                    name="dessert"
+                    value="dessert"
+                    checked={onlyDessert}
+                    onChange={dessertFn}
                 />
             </div>
             <div>
@@ -166,10 +184,10 @@ function App(): JSX.Element {
             <br></br>
             <RestaurantList
                 restaurants={restaurants}
-                asianRestaurants={asianRestaurants}
-                onlyAsian={onlyAsian}
-                sitdownRestaurants={sitdownRestaurants}
-                onlySitdown={onlySitdown}
+                //asianRestaurants={asianRestaurants}
+                //onlyAsian={onlyAsian}
+                //sitdownRestaurants={sitdownRestaurants}
+                //onlySitdown={onlySitdown}
                 filterList={filterList}
             ></RestaurantList>
         </div>
