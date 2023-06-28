@@ -6,22 +6,22 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (140 ms)
+  ✓ renders the course name somewhere (172 ms)
 
----------------------|---------|----------|---------|---------|-------------------
-File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------|---------|----------|---------|---------|-------------------
-All files            |   28.98 |     5.55 |      25 |   28.35 |                   
- src                 |   30.76 |        0 |   16.66 |   31.57 |                   
-  App.tsx            |   30.76 |        0 |   16.66 |   31.57 | 26-83,177         
- src/Components      |   26.66 |     6.25 |   33.33 |   24.13 |                   
-  RestaurantList.tsx |   24.13 |     6.25 |   27.27 |   21.42 | 24-50,62          
-  RestaurantView.tsx |     100 |      100 |     100 |     100 |                   
- src/Interfaces      |       0 |        0 |       0 |       0 |                   
-  restaurant.ts      |       0 |        0 |       0 |       0 |                   
----------------------|---------|----------|---------|---------|-------------------
+---------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
+File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                        
+---------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
+All files            |   29.41 |    28.33 |   18.91 |   29.05 |                                                                          
+ src                 |   32.72 |        0 |   17.64 |   33.33 |                                                                          
+  App.tsx            |   32.72 |        0 |   17.64 |   33.33 | 52-152,294                                                               
+ src/Components      |   26.56 |    29.31 |      20 |   25.39 |                                                                          
+  RestaurantList.tsx |   25.39 |    29.31 |   15.78 |   24.19 | 31-57,63-66,69-71,84-85,90-93,99-102,108-111,114-116,119-121,124-126,138 
+  RestaurantView.tsx |     100 |      100 |     100 |     100 |                                                                          
+ src/Interfaces      |       0 |        0 |       0 |       0 |                                                                          
+  restaurant.ts      |       0 |        0 |       0 |       0 |                                                                          
+---------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.339 s
+Time:        2.258 s
 Ran all test suites.
