@@ -8,12 +8,16 @@ export function RestaurantList({
     restaurants,
     filterList,
     chosenLocation,
-    chosenService
+    chosenService,
+    chosenCuisine,
+    chosenMeal
 }: {
     restaurants: Restaurant[];
     filterList: string[];
     chosenLocation: string;
     chosenService: string;
+    chosenCuisine: string;
+    chosenMeal: string;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
@@ -22,10 +26,6 @@ export function RestaurantList({
             if (filterList[i] === "grubhub") {
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.grubhub
-                );
-            } else if (filterList[i] === "asian") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.asian
                 );
             } else if (filterList[i] === "bar") {
                 currentRestaurants = currentRestaurants.filter(
@@ -39,6 +39,10 @@ export function RestaurantList({
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.coffee
                 );
+            } else if (filterList[i] === "bowls") {
+                currentRestaurants = currentRestaurants.filter(
+                    (restaurant: Restaurant): boolean => restaurant.bowls
+                );
             } else if (filterList[i] === "pizza") {
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.pizza
@@ -48,6 +52,28 @@ export function RestaurantList({
                     (restaurant: Restaurant): boolean => restaurant.dessert
                 );
             }
+        }
+
+        if (chosenMeal === "Brunch") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.brunch
+            );
+        } else if (chosenMeal === "Lunch and Dinner") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.lunchdinner
+            );
+        }
+
+        if (chosenCuisine === "Asian") {
+            //console.log("Mexican was chosen");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.asian
+            );
+        } else if (chosenCuisine === "Mexican") {
+            //console.log("Asian was chosen");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.mexican
+            );
         }
 
         if (chosenService === "Sitdown") {
@@ -134,7 +160,9 @@ export function RestaurantList({
 
     return filterList.length > 0 ||
         chosenLocation !== "None" ||
-        chosenService !== "None" ? (
+        chosenService !== "No Service Selected" ||
+        chosenCuisine !== "No Cuisine Selected" ||
+        chosenMeal !== "No Meal Selected" ? (
         <div>
             <Stack gap={3}>
                 {finalRestaurants.map((restaurant: Restaurant) => (

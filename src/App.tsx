@@ -23,25 +23,43 @@ const locations = [
 
 const services = ["No Service Selected", "Sitdown", "Takeout"];
 
+const cuisines = ["No Cuisine Selected", "Asian", "Mexican"];
+
+const meals = ["No Meal Selected", "Brunch", "Lunch and Dinner"];
+
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
 
-    // state for all filters
-    //const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
+    // Initialize the state for all filters
+
+    // Service filters
     const [chosenService, setService] = useState<string>(services[0]);
     const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
 
-    const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
+    // Drink filters
     const [onlyBar, setOnlyBar] = useState<boolean>(false);
     const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
     const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
+
+    // Food filters
+    const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
     const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
     const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
+
+    // Cuisine filters
+    const [chosenCuisine, setCuisine] = useState<string>(cuisines[0]);
+
+    // Price filters
     const [lowPrice, setLowPrice] = useState<boolean>(false);
     const [midPrice, setMidPrice] = useState<boolean>(false);
     const [highPrice, setHighPrice] = useState<boolean>(false);
+
+    // Location filters
     const [chosenLocation, setLocation] = useState<string>(locations[0]);
+
+    // Meal filters
+    const [chosenMeal, setMeal] = useState<string>(meals[0]);
 
     // filterList - an array of filters
     const [filterList, setFilterList] = useState<string[]>([]);
@@ -56,25 +74,12 @@ function App(): JSX.Element {
         }
     }
 
-    /*
-    function sitdownFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlySitdown(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }*/
-
     function updateService(event: React.ChangeEvent<HTMLInputElement>) {
         setService(event.target.value);
     }
 
     function grubhubFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyGrubhub(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyAsian(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
     }
@@ -97,6 +102,12 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
+    function bowlsFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBowls(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
     function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyPizza(event.target.checked);
         console.log(event.target.checked);
@@ -107,6 +118,11 @@ function App(): JSX.Element {
         setOnlyDessert(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
+    }
+
+    function updateCuisine(event: React.ChangeEvent<HTMLInputElement>) {
+        console.log("The event was: " + event.target.value);
+        setCuisine(event.target.value);
     }
 
     function lowPriceFn(event: React.ChangeEvent<HTMLInputElement>) {
@@ -129,6 +145,10 @@ function App(): JSX.Element {
 
     function updateLocation(event: React.ChangeEvent<HTMLInputElement>) {
         setLocation(event.target.value);
+    }
+
+    function updateMeal(event: React.ChangeEvent<HTMLInputElement>) {
+        setMeal(event.target.value);
     }
 
     return (
@@ -168,17 +188,7 @@ function App(): JSX.Element {
             </div>
             <br></br>
             <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-asian"
-                    label="Asian"
-                    name="asian"
-                    value="asian"
-                    checked={onlyAsian}
-                    onChange={asianFn}
-                />
-            </div>
-            <div>
+                <h4>Drinks:</h4>
                 <Form.Check
                     type="checkbox"
                     id="check-bar"
@@ -188,8 +198,6 @@ function App(): JSX.Element {
                     checked={onlyBar}
                     onChange={barFn}
                 />
-            </div>
-            <div>
                 <Form.Check
                     type="checkbox"
                     id="check-boba"
@@ -199,8 +207,6 @@ function App(): JSX.Element {
                     checked={onlyBoba}
                     onChange={bobaFn}
                 />
-            </div>
-            <div>
                 <Form.Check
                     type="checkbox"
                     id="check-coffee"
@@ -211,7 +217,18 @@ function App(): JSX.Element {
                     onChange={coffeeFn}
                 />
             </div>
+            <br></br>
+            <h4>Food Options:</h4>
             <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-bowls"
+                    label="Bowls"
+                    name="bowls"
+                    value="bowls"
+                    checked={onlyBowls}
+                    onChange={bowlsFn}
+                />
                 <Form.Check
                     type="checkbox"
                     id="check-pizza"
@@ -221,8 +238,6 @@ function App(): JSX.Element {
                     checked={onlyPizza}
                     onChange={pizzaFn}
                 />
-            </div>
-            <div>
                 <Form.Check
                     type="checkbox"
                     id="check-dessert"
@@ -233,7 +248,25 @@ function App(): JSX.Element {
                     onChange={dessertFn}
                 />
             </div>
+            <br></br>
             <div>
+                <h4>Cuisine Type:</h4>
+                {cuisines.map((cuisine: string) => (
+                    <Form.Check
+                        key={cuisine}
+                        type="radio"
+                        name={cuisine}
+                        id={cuisine}
+                        label={cuisine}
+                        value={cuisine}
+                        onChange={updateCuisine}
+                        checked={chosenCuisine === cuisine}
+                    />
+                ))}
+            </div>
+            <br></br>
+            <div>
+                <h4>Prices:</h4>
                 <Form.Check
                     type="checkbox"
                     id="check-lowprice"
@@ -243,8 +276,6 @@ function App(): JSX.Element {
                     checked={lowPrice}
                     onChange={lowPriceFn}
                 />
-            </div>
-            <div>
                 <Form.Check
                     type="checkbox"
                     id="check-midprice"
@@ -254,8 +285,6 @@ function App(): JSX.Element {
                     checked={midPrice}
                     onChange={midPriceFn}
                 />
-            </div>
-            <div>
                 <Form.Check
                     type="checkbox"
                     id="check-highprice"
@@ -268,6 +297,7 @@ function App(): JSX.Element {
             </div>
             <br></br>
             <div>
+                <h4>Location:</h4>
                 {locations.map((location: string) => (
                     <Form.Check
                         key={location}
@@ -281,6 +311,23 @@ function App(): JSX.Element {
                     />
                 ))}
             </div>
+            <br></br>
+            <div>
+                <h4>Meal:</h4>
+                {meals.map((meal: string) => (
+                    <Form.Check
+                        key={meal}
+                        type="radio"
+                        name={meal}
+                        id={meal}
+                        label={meal}
+                        value={meal}
+                        onChange={updateMeal}
+                        checked={chosenMeal === meal}
+                    />
+                ))}
+            </div>
+            <br></br>
             <div>
                 <Stack>
                     {filterList.map((myFilter: string) => (
@@ -297,6 +344,8 @@ function App(): JSX.Element {
                 filterList={filterList}
                 chosenLocation={chosenLocation}
                 chosenService={chosenService}
+                chosenCuisine={chosenCuisine}
+                chosenMeal={chosenMeal}
             ></RestaurantList>
         </div>
     );
