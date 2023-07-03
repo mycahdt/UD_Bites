@@ -1260,7 +1260,7 @@
         "lunchdinner": false
     },
     {
-        "name": "Dunkin'",
+        "name": "Dunkin.'",
         "location": "Perkins",
         "address": "325 Academy St, Newark, DE 19716",
         "price": "$",
@@ -1381,7 +1381,7 @@
     },
     {
         "name": "Claymont Steak Shop",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "57 S Main St, Newark, DE 19711",
         "price": "$",
         "menu": "https://claymontsteakshop.com/menu/",
@@ -1401,7 +1401,7 @@
     },
     {
         "name": "Bing's Bake & Brew",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "57 S Main St #101, Newark, DE 19711",
         "price": "$",
         "menu": "https://bingsbakeandbrew.com/fresh-brewed/",
@@ -1441,7 +1441,7 @@
     },
     {
         "name": "Buffalo Wild Wings",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "100 S Main St, Newark, DE 19711",
         "price": "$$",
         "menu": "https://www.buffalowildwings.com/menu/",
@@ -1461,7 +1461,7 @@
     },
     {
         "name": "Atexquita Restaurant Mexican Grill & Bar",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "136 S Main St Ste 106, Newark, DE 19711",
         "price": "$$",
         "menu": "https://atexquitanewark.square.site/s/order?location=11ea29c4ccde96aaa5ad0cc47a2ae330",
@@ -1481,7 +1481,7 @@
     },
     {
         "name": "Cafeneo",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "139 S Main St #101, Newark, DE 19711",
         "price": "$",
         "menu": "https://www.cafeneobakery.com/Menu",
@@ -1501,7 +1501,7 @@
     },
     {
         "name": "Pat's Pizza & Pasta (temporarily closed)",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "160 S Main St, Newark, DE 19711",
         "price": "$",
         "menu": "https://marrows.patspizzeria.com/ordering/menu/Specials",
@@ -1521,7 +1521,7 @@
     },
     {
         "name": "Barley Craft Beer and Whiskey Bar (temporarily closed)",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "160 S Main St, Newark, DE 19711",
         "price": "$$",
         "menu": "https://www.barleynewark.com/menu",
@@ -1541,7 +1541,7 @@
     },
     {
         "name": "bb.q Chicken South Main St Plaza",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "165 S Main St Unit 117, Newark, DE 19711",
         "price": "$",
         "menu": "https://bbqchicken.com/menu/",
@@ -1561,7 +1561,7 @@
     },
     {
         "name": "TIGER SUGER",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "211 S Main St Unit 106, Newark, DE 19711",
         "price": "$",
         "menu": "https://tigersugar.co/#menu",
@@ -1581,7 +1581,7 @@
     },
     {
         "name": "The Green Turtle Sports Bar & Grille",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "211 S Main St, Newark, DE 19711",
         "price": "$$",
         "menu": "https://thegreeneturtle.com/menu/",
@@ -1601,7 +1601,7 @@
     },
     {
         "name": "D.P. Dough Newark ",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "257 S Main St, Newark, DE 19711",
         "price": "$",
         "menu": "https://www.dpdough.com/menu",
@@ -1621,7 +1621,7 @@
     },
     {
         "name": "Kong Pao Palace",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "259 S Main St, Newark, DE 19711",
         "price": "$$",
         "menu": "https://www.kongpaopalace.com/menu",
@@ -1641,7 +1641,7 @@
     },
     {
         "name": "Margherita's Pizza",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "265 S Main St, Newark, DE 19711",
         "price": "$",
         "menu": "https://www.margheritaspizzamenu.com/#menu",
@@ -1661,7 +1661,7 @@
     },
     {
         "name": "Wayback Burger",
-        "location": "S Main Street ",
+        "location": "S Main Street",
         "address": "250 S Main St Suite 110, Newark, DE 19711",
         "price": "$$",
         "menu": "https://waybackburgers.com/menu/",
