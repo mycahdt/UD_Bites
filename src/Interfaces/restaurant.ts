@@ -5,7 +5,6 @@ export interface Restaurant {
     price: string;
     menu: string;
     sitdown: boolean;
-    takeout: boolean;
     grubhub: boolean;
     bar: boolean;
     boba: boolean;

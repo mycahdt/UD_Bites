@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { Restaurant } from "../Interfaces/restaurant";
@@ -6,35 +7,25 @@ import { RestaurantView } from "./RestaurantView";
 export function RestaurantList({
     restaurants,
     filterList,
-    chosenLocation
+    chosenLocation,
+    chosenService
 }: {
     restaurants: Restaurant[];
     filterList: string[];
     chosenLocation: string;
+    chosenService: string;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
 
-        /*
-        console.log("HEREEEEE");
-        console.log(chosenLocation);
-
-        if (chosenLocation === "Perkins") {
-            console.log("Clicked perkins!");
-            console.log(currentRestaurants[65].location);
-            if (currentRestaurants[65].location === chosenLocation) {
-                console.log("Your answer is here");
-            }
-        }*/
-
         for (let i = 0; i < filterList.length; i++) {
-            if (filterList[i] === "asian") {
+            if (filterList[i] === "grubhub") {
+                currentRestaurants = currentRestaurants.filter(
+                    (restaurant: Restaurant): boolean => restaurant.grubhub
+                );
+            } else if (filterList[i] === "asian") {
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.asian
-                );
-            } else if (filterList[i] === "sitdown") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.sitdown
                 );
             } else if (filterList[i] === "bar") {
                 currentRestaurants = currentRestaurants.filter(
@@ -57,6 +48,16 @@ export function RestaurantList({
                     (restaurant: Restaurant): boolean => restaurant.dessert
                 );
             }
+        }
+
+        if (chosenService === "Sitdown") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.sitdown
+            );
+        } else if (chosenService === "Takeout") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => !restaurant.sitdown
+            );
         }
 
         if (chosenLocation !== "None" && chosenLocation !== "Other Locations") {
@@ -131,7 +132,9 @@ export function RestaurantList({
     }
     const finalRestaurants = allFilters();
 
-    return filterList.length > 0 || chosenLocation != "None" ? (
+    return filterList.length > 0 ||
+        chosenLocation !== "None" ||
+        chosenService !== "None" ? (
         <div>
             <Stack gap={3}>
                 {finalRestaurants.map((restaurant: Restaurant) => (

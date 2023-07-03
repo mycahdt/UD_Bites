@@ -21,13 +21,18 @@ const locations = [
     "Other Locations"
 ];
 
+const services = ["No Service Selected", "Sitdown", "Takeout"];
+
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
 
     // state for all filters
+    //const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
+    const [chosenService, setService] = useState<string>(services[0]);
+    const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
+
     const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
-    const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
     const [onlyBar, setOnlyBar] = useState<boolean>(false);
     const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
     const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
@@ -36,12 +41,6 @@ function App(): JSX.Element {
     const [lowPrice, setLowPrice] = useState<boolean>(false);
     const [midPrice, setMidPrice] = useState<boolean>(false);
     const [highPrice, setHighPrice] = useState<boolean>(false);
-    //const [main, setMain] = useState<boolean>(false);
-    //const [trabant, setTrabant] = useState<boolean>(false);
-    //const [perkins, setPerkins] = useState<boolean>(false);
-    //const [south, setSouth] = useState<boolean>(false);
-    //const [newark, setNewark] = useState<boolean>(false);
-    //const [otherLocation, setOtherLocation] = useState<boolean>(false);
     const [chosenLocation, setLocation] = useState<string>(locations[0]);
 
     // filterList - an array of filters
@@ -57,14 +56,25 @@ function App(): JSX.Element {
         }
     }
 
-    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyAsian(event.target.checked);
+    /*
+    function sitdownFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlySitdown(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }*/
+
+    function updateService(event: React.ChangeEvent<HTMLInputElement>) {
+        setService(event.target.value);
+    }
+
+    function grubhubFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyGrubhub(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
     }
 
-    function sitdownFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlySitdown(event.target.checked);
+    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyAsian(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
     }
@@ -116,37 +126,6 @@ function App(): JSX.Element {
         console.log(event.target.checked);
         updateFilters(event);
     }
-    /*
-    function mainFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setMain(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    function trabantFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setTrabant(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    function perkinsFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setPerkins(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    function southFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setSouth(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    function newarkFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setNewark(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    function otherLocationFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOtherLocation(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    } */
 
     function updateLocation(event: React.ChangeEvent<HTMLInputElement>) {
         setLocation(event.target.value);
@@ -164,16 +143,30 @@ function App(): JSX.Element {
             <p>Mycahs first commit</p>
             <p>testing branch out</p>
             <div>
+                <h4>Service Options:</h4>
+                {services.map((service: string) => (
+                    <Form.Check
+                        key={service}
+                        type="radio"
+                        name={service}
+                        id={service}
+                        label={service}
+                        value={service}
+                        onChange={updateService}
+                        checked={chosenService === service}
+                    />
+                ))}
                 <Form.Check
                     type="checkbox"
-                    id="check-sitdown"
-                    label="Sitdown"
-                    name="sitdown"
-                    value="sitdown"
-                    checked={onlySitdown}
-                    onChange={sitdownFn}
+                    id="check-grubhub"
+                    label="Must order with Grubhub"
+                    name="grubhub"
+                    value="grubhub"
+                    checked={onlyGrubhub}
+                    onChange={grubhubFn}
                 />
             </div>
+            <br></br>
             <div>
                 <Form.Check
                     type="checkbox"
@@ -303,6 +296,7 @@ function App(): JSX.Element {
                 restaurants={restaurants}
                 filterList={filterList}
                 chosenLocation={chosenLocation}
+                chosenService={chosenService}
             ></RestaurantList>
         </div>
     );
@@ -312,67 +306,12 @@ function App(): JSX.Element {
 <div>
                 <Form.Check
                     type="checkbox"
-                    id="check-main"
-                    label="Main Street"
-                    name="main"
-                    value="main"
-                    checked={main}
-                    onChange={mainFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-trabant"
-                    label="Trabant"
-                    name="trabant"
-                    value="trabant"
-                    checked={trabant}
-                    onChange={trabantFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-perkins"
-                    label="Perkins"
-                    name="perkins"
-                    value="perkins"
-                    checked={perkins}
-                    onChange={perkinsFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-south"
-                    label="S Main Street"
-                    name="south"
-                    value="south"
-                    checked={south}
-                    onChange={southFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-newark"
-                    label="Newark Shopping Center"
-                    name="newark"
-                    value="newark"
-                    checked={newark}
-                    onChange={newarkFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-otherlocation"
-                    label="Other Locations"
-                    name="otherlocation"
-                    value="otherlocation"
-                    checked={otherLocation}
-                    onChange={otherLocationFn}
+                    id="check-sitdown"
+                    label="Sitdown"
+                    name="sitdown"
+                    value="sitdown"
+                    checked={onlySitdown}
+                    onChange={sitdownFn}
                 />
             </div>
 */
