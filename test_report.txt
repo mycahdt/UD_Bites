@@ -5,40 +5,23 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
-  console.error
-    Warning: Encountered two children with the same key, `Dunkin'`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-        at div
-        at /home/runner/work/UD_Bites/UD_Bites/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at div
-        at RestaurantList (/home/runner/work/UD_Bites/UD_Bites/src/Components/RestaurantList.tsx:7:5)
-        at div
-        at App (/home/runner/work/UD_Bites/UD_Bites/src/App.tsx:26:27)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
-
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (205 ms)
+  ✓ renders the course name somewhere (161 ms)
 
----------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
-File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                        
----------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
-All files            |   29.41 |    28.33 |   18.91 |   29.05 |                                                                          
- src                 |   32.72 |        0 |   17.64 |   33.33 |                                                                          
-  App.tsx            |   32.72 |        0 |   17.64 |   33.33 | 52-152,294                                                               
- src/Components      |   26.56 |    29.31 |      20 |   25.39 |                                                                          
-  RestaurantList.tsx |   25.39 |    29.31 |   15.78 |   24.19 | 31-57,63-66,69-71,84-85,90-93,99-102,108-111,114-116,119-121,124-126,138 
-  RestaurantView.tsx |     100 |      100 |     100 |     100 |                                                                          
- src/Interfaces      |       0 |        0 |       0 |       0 |                                                                          
-  restaurant.ts      |       0 |        0 |       0 |       0 |                                                                          
----------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
+---------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------
+File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                     
+---------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------
+All files            |      31 |    30.76 |   19.51 |    30.7 |                                                                                       
+ src                 |   35.59 |        0 |   21.05 |    36.2 |                                                                                       
+  App.tsx            |   35.59 |        0 |   21.05 |    36.2 | 51-131,287                                                                            
+ src/Components      |   27.14 |    31.74 |   18.18 |   26.08 |                                                                                       
+  RestaurantList.tsx |   26.08 |    31.74 |   14.28 |      25 | 22-48,54-55,58-59,64-67,70-72,85-86,91-94,100-103,109-112,115-117,120-122,125-127,156 
+  RestaurantView.tsx |     100 |      100 |     100 |     100 |                                                                                       
+ src/Interfaces      |       0 |        0 |       0 |       0 |                                                                                       
+  restaurant.ts      |       0 |        0 |       0 |       0 |                                                                                       
+---------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.443 s
+Time:        2.5 s
 Ran all test suites.
