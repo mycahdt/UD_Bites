@@ -9,13 +9,15 @@ export function RestaurantList({
     filterList,
     chosenLocation,
     chosenService,
-    chosenCuisine
+    chosenCuisine,
+    chosenMeal
 }: {
     restaurants: Restaurant[];
     filterList: string[];
     chosenLocation: string;
     chosenService: string;
     chosenCuisine: string;
+    chosenMeal: string;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
@@ -52,9 +54,14 @@ export function RestaurantList({
             }
         }
 
-        if (chosenCuisine !== "No Cuisine Selected") {
-            console.log("In here!");
-            console.log(chosenCuisine);
+        if (chosenMeal === "Brunch") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.brunch
+            );
+        } else if (chosenMeal === "Lunch and Dinner") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.lunchdinner
+            );
         }
 
         if (chosenCuisine === "Asian") {
@@ -154,7 +161,8 @@ export function RestaurantList({
     return filterList.length > 0 ||
         chosenLocation !== "None" ||
         chosenService !== "No Service Selected" ||
-        chosenCuisine !== "No Cuisine Selected" ? (
+        chosenCuisine !== "No Cuisine Selected" ||
+        chosenMeal !== "No Meal Selected" ? (
         <div>
             <Stack gap={3}>
                 {finalRestaurants.map((restaurant: Restaurant) => (

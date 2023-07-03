@@ -25,29 +25,41 @@ const services = ["No Service Selected", "Sitdown", "Takeout"];
 
 const cuisines = ["No Cuisine Selected", "Asian", "Mexican"];
 
+const meals = ["No Meal Selected", "Brunch", "Lunch and Dinner"];
+
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
 
-    // state for all filters
+    // Initialize the state for all filters
+
+    // Service filters
     const [chosenService, setService] = useState<string>(services[0]);
     const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
 
+    // Drink filters
     const [onlyBar, setOnlyBar] = useState<boolean>(false);
     const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
     const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
 
+    // Food filters
     const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
     const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
     const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
 
-    //const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
+    // Cuisine filters
     const [chosenCuisine, setCuisine] = useState<string>(cuisines[0]);
 
+    // Price filters
     const [lowPrice, setLowPrice] = useState<boolean>(false);
     const [midPrice, setMidPrice] = useState<boolean>(false);
     const [highPrice, setHighPrice] = useState<boolean>(false);
+
+    // Location filters
     const [chosenLocation, setLocation] = useState<string>(locations[0]);
+
+    // Meal filters
+    const [chosenMeal, setMeal] = useState<string>(meals[0]);
 
     // filterList - an array of filters
     const [filterList, setFilterList] = useState<string[]>([]);
@@ -108,13 +120,6 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
-    /*
-    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyAsian(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }*/
-
     function updateCuisine(event: React.ChangeEvent<HTMLInputElement>) {
         console.log("The event was: " + event.target.value);
         setCuisine(event.target.value);
@@ -140,6 +145,10 @@ function App(): JSX.Element {
 
     function updateLocation(event: React.ChangeEvent<HTMLInputElement>) {
         setLocation(event.target.value);
+    }
+
+    function updateMeal(event: React.ChangeEvent<HTMLInputElement>) {
+        setMeal(event.target.value);
     }
 
     return (
@@ -288,6 +297,7 @@ function App(): JSX.Element {
             </div>
             <br></br>
             <div>
+                <h4>Location:</h4>
                 {locations.map((location: string) => (
                     <Form.Check
                         key={location}
@@ -301,6 +311,23 @@ function App(): JSX.Element {
                     />
                 ))}
             </div>
+            <br></br>
+            <div>
+                <h4>Meal:</h4>
+                {meals.map((meal: string) => (
+                    <Form.Check
+                        key={meal}
+                        type="radio"
+                        name={meal}
+                        id={meal}
+                        label={meal}
+                        value={meal}
+                        onChange={updateMeal}
+                        checked={chosenMeal === meal}
+                    />
+                ))}
+            </div>
+            <br></br>
             <div>
                 <Stack>
                     {filterList.map((myFilter: string) => (
@@ -318,6 +345,7 @@ function App(): JSX.Element {
                 chosenLocation={chosenLocation}
                 chosenService={chosenService}
                 chosenCuisine={chosenCuisine}
+                chosenMeal={chosenMeal}
             ></RestaurantList>
         </div>
     );
