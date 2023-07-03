@@ -5,8 +5,25 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+  console.error
+    Warning: Encountered two children with the same key, `Dunkin'`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at /home/runner/work/UD_Bites/UD_Bites/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at div
+        at RestaurantList (/home/runner/work/UD_Bites/UD_Bites/src/Components/RestaurantList.tsx:7:5)
+        at div
+        at App (/home/runner/work/UD_Bites/UD_Bites/src/App.tsx:26:27)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (172 ms)
+  ✓ renders the course name somewhere (205 ms)
 
 ---------------------|---------|----------|---------|---------|--------------------------------------------------------------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                        
@@ -23,5 +40,5 @@ All files            |   29.41 |    28.33 |   18.91 |   29.05 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.258 s
+Time:        2.443 s
 Ran all test suites.
