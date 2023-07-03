@@ -28,16 +28,18 @@ function App(): JSX.Element {
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
 
     // state for all filters
-    //const [onlySitdown, setOnlySitdown] = useState<boolean>(false);
     const [chosenService, setService] = useState<string>(services[0]);
     const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
 
-    const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
     const [onlyBar, setOnlyBar] = useState<boolean>(false);
     const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
     const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
+
+    const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
     const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
     const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
+
+    const [onlyAsian, setOnlyAsian] = useState<boolean>(false);
     const [lowPrice, setLowPrice] = useState<boolean>(false);
     const [midPrice, setMidPrice] = useState<boolean>(false);
     const [highPrice, setHighPrice] = useState<boolean>(false);
@@ -56,25 +58,12 @@ function App(): JSX.Element {
         }
     }
 
-    /*
-    function sitdownFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlySitdown(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }*/
-
     function updateService(event: React.ChangeEvent<HTMLInputElement>) {
         setService(event.target.value);
     }
 
     function grubhubFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyGrubhub(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyAsian(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
     }
@@ -97,6 +86,12 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
+    function bowlsFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBowls(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
     function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyPizza(event.target.checked);
         console.log(event.target.checked);
@@ -105,6 +100,12 @@ function App(): JSX.Element {
 
     function dessertFn(event: React.ChangeEvent<HTMLInputElement>) {
         setOnlyDessert(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function asianFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyAsian(event.target.checked);
         console.log(event.target.checked);
         updateFilters(event);
     }
@@ -170,17 +171,6 @@ function App(): JSX.Element {
             <div>
                 <Form.Check
                     type="checkbox"
-                    id="check-asian"
-                    label="Asian"
-                    name="asian"
-                    value="asian"
-                    checked={onlyAsian}
-                    onChange={asianFn}
-                />
-            </div>
-            <div>
-                <Form.Check
-                    type="checkbox"
                     id="check-bar"
                     label="Bar"
                     name="bar"
@@ -211,6 +201,18 @@ function App(): JSX.Element {
                     onChange={coffeeFn}
                 />
             </div>
+            <br></br>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-bowls"
+                    label="Bowls"
+                    name="bowls"
+                    value="bowls"
+                    checked={onlyBowls}
+                    onChange={bowlsFn}
+                />
+            </div>
             <div>
                 <Form.Check
                     type="checkbox"
@@ -231,6 +233,18 @@ function App(): JSX.Element {
                     value="dessert"
                     checked={onlyDessert}
                     onChange={dessertFn}
+                />
+            </div>
+            <br></br>
+            <div>
+                <Form.Check
+                    type="checkbox"
+                    id="check-asian"
+                    label="Asian"
+                    name="asian"
+                    value="asian"
+                    checked={onlyAsian}
+                    onChange={asianFn}
                 />
             </div>
             <div>

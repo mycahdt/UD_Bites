@@ -23,10 +23,6 @@ export function RestaurantList({
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.grubhub
                 );
-            } else if (filterList[i] === "asian") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.asian
-                );
             } else if (filterList[i] === "bar") {
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.bar
@@ -38,6 +34,14 @@ export function RestaurantList({
             } else if (filterList[i] === "coffee") {
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.coffee
+                );
+            } else if (filterList[i] === "bowls") {
+                currentRestaurants = currentRestaurants.filter(
+                    (restaurant: Restaurant): boolean => restaurant.bowls
+                );
+            } else if (filterList[i] === "asian") {
+                currentRestaurants = currentRestaurants.filter(
+                    (restaurant: Restaurant): boolean => restaurant.asian
                 );
             } else if (filterList[i] === "pizza") {
                 currentRestaurants = currentRestaurants.filter(
