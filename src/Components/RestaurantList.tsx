@@ -1,8 +1,9 @@
 /* eslint-disable indent */
 import React from "react";
-import { Stack } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Restaurant } from "../Interfaces/restaurant";
 import { RestaurantView } from "./RestaurantView";
+import "../Styles/restaurantsTable.css";
 
 export function RestaurantList({
     restaurants,
@@ -164,21 +165,42 @@ export function RestaurantList({
         chosenCuisine !== "No Cuisine Selected" ||
         chosenMeal !== "No Meal Selected" ? (
         <div>
-            <Stack gap={3}>
-                {finalRestaurants.map((restaurant: Restaurant) => (
-                    <div
-                        key={restaurant.name}
-                        className="bg-light border m-2 p-2"
-                    >
-                        <RestaurantView
-                            restaurant={restaurant}
-                        ></RestaurantView>
-                    </div>
-                ))}
-            </Stack>
+            <Container>
+                <div className="container">
+                    {finalRestaurants.map((restaurant: Restaurant) => (
+                        <div
+                            key={restaurant.name}
+                            className="bg-light border m-2 p-2"
+                        >
+                            <RestaurantView
+                                restaurant={restaurant}
+                            ></RestaurantView>
+                        </div>
+                    ))}
+                </div>
+            </Container>
         </div>
     ) : (
         <div>
+            <Container>
+                <div className="container">
+                    {restaurants.map((restaurant: Restaurant) => (
+                        <div
+                            key={restaurant.name}
+                            className="bg-light border m-2 p-2"
+                        >
+                            <RestaurantView
+                                restaurant={restaurant}
+                            ></RestaurantView>
+                        </div>
+                    ))}
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+/*
             <Stack gap={3}>
                 {restaurants.map((restaurant: Restaurant) => (
                     <div
@@ -191,6 +213,4 @@ export function RestaurantList({
                     </div>
                 ))}
             </Stack>
-        </div>
-    );
-}
+*/
