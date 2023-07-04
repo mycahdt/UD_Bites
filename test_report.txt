@@ -6,14 +6,14 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (209 ms)
+  ✓ renders the course name somewhere (182 ms)
 
 ---------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                 
 ---------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------
 All files            |   33.33 |    34.66 |    20.4 |    33.1 |                                                                                                                   
  src                 |    39.7 |        0 |   26.08 |   40.29 |                                                                                                                   
-  App.tsx            |    39.7 |        0 |   26.08 |   40.29 | 69-151,334                                                                                                        
+  App.tsx            |    39.7 |        0 |   26.08 |   40.29 | 69-151,366                                                                                                        
  src/Components      |   28.04 |    35.61 |   15.38 |   27.16 |                                                                                                                   
   RestaurantList.tsx |   27.16 |    35.61 |      12 |   26.25 | 27-53,59-60,63-64,70-71,75-76,81-82,85-86,91-94,97-99,112-113,118-121,127-130,136-139,142-144,147-149,152-154,171 
   RestaurantView.tsx |     100 |      100 |     100 |     100 |                                                                                                                   
@@ -23,5 +23,5 @@ All files            |   33.33 |    34.66 |    20.4 |    33.1 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.44 s
+Time:        2.531 s
 Ran all test suites.
