@@ -3,7 +3,7 @@ import "./App.css";
 import my_restaurants from "./Data/restaurants.json";
 import { Restaurant } from "./Interfaces/restaurant";
 import { RestaurantList } from "./Components/RestaurantList";
-import { Col, Form, Row, Stack } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 
 const RESTAURANTS = my_restaurants.map(
     (theRest): Restaurant => ({
@@ -159,12 +159,11 @@ function App(): JSX.Element {
                     Find all restaurants at the University of Delaware!
                 </h4>
             </header>
-            <p></p>
             <Row>
-                <Col xs={6} md={4}>
+                <Col xs={4}>
                     <div
                         className="App-filters"
-                        style={{ position: "sticky", top: "18px" }}
+                        style={{ position: "sticky", top: "20px" }}
                     >
                         <h2>Filters</h2>
                         <Row>
@@ -227,7 +226,6 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-
                         <Row>
                             <Col>
                                 <h4>Food Options:</h4>
@@ -353,9 +351,9 @@ function App(): JSX.Element {
                         </Row>
                     </div>
                 </Col>
-                <Col xs={12} md={8}>
+                <Col xs={8}>
                     <div className="App-restaurants">
-                        <h2>Restaurants</h2>
+                        <h2 style={{ marginTop: "10px" }}>Restaurants</h2>
                         <RestaurantList
                             restaurants={restaurants}
                             filterList={filterList}
@@ -365,7 +363,14 @@ function App(): JSX.Element {
                             chosenMeal={chosenMeal}
                         ></RestaurantList>
                     </div>
-                    <div>
+                </Col>
+            </Row>
+        </div>
+    );
+}
+
+/*
+<div>
                         <Stack>
                             {filterList.map((myFilter: string) => (
                                 <div
@@ -377,13 +382,6 @@ function App(): JSX.Element {
                             ))}
                         </Stack>
                     </div>
-                </Col>
-            </Row>
-        </div>
-    );
-}
-
-/*
 <div>
                 <Form.Check
                     type="checkbox"

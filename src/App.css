@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     color: #150f03;
+    margin-bottom: 20px;
 }
 
 .App-header-title {
@@ -52,6 +53,9 @@
 .App-restaurants {
     background-color: #d3c9bf;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .App-link {
