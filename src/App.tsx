@@ -165,7 +165,7 @@ function App(): JSX.Element {
                         className="App-filters"
                         style={{ position: "sticky", top: "20px" }}
                     >
-                        <h2>Filters</h2>
+                        <h2 style={{ padding: "10px" }}>Filters</h2>
                         <Row>
                             <Col>
                                 <div>
@@ -353,7 +353,7 @@ function App(): JSX.Element {
                 </Col>
                 <Col xs={8}>
                     <div className="App-restaurants">
-                        <h2 style={{ marginTop: "10px" }}>Restaurants</h2>
+                        <h2 style={{ padding: "10px" }}>Restaurants</h2>
                         <RestaurantList
                             restaurants={restaurants}
                             filterList={filterList}
