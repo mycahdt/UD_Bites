@@ -154,17 +154,17 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                <h1 className="App-header-title">UD Bites</h1>
+                <h4>Find all restaurants at the University of Delaware!</h4>
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <p>Mycahs first commit</p>
-            <p>testing branch out</p>
+            <p></p>
             <Row>
                 <Col xs={6} md={4}>
-                    <div style={{ position: "sticky", top: "18px" }}>
+                    <div
+                        className="App-filters"
+                        style={{ position: "sticky", top: "18px" }}
+                    >
+                        <h2>Filters</h2>
                         <Row>
                             <Col>
                                 <div>
@@ -352,14 +352,17 @@ function App(): JSX.Element {
                     </div>
                 </Col>
                 <Col xs={12} md={8}>
-                    <RestaurantList
-                        restaurants={restaurants}
-                        filterList={filterList}
-                        chosenLocation={chosenLocation}
-                        chosenService={chosenService}
-                        chosenCuisine={chosenCuisine}
-                        chosenMeal={chosenMeal}
-                    ></RestaurantList>
+                    <div className="App-restaurants">
+                        <h2>Restaurants</h2>
+                        <RestaurantList
+                            restaurants={restaurants}
+                            filterList={filterList}
+                            chosenLocation={chosenLocation}
+                            chosenService={chosenService}
+                            chosenCuisine={chosenCuisine}
+                            chosenMeal={chosenMeal}
+                        ></RestaurantList>
+                    </div>
                     <div>
                         <Stack>
                             {filterList.map((myFilter: string) => (
