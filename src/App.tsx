@@ -155,7 +155,9 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <h1 className="App-header-title">UD Bites</h1>
-                <h4>Find all restaurants at the University of Delaware!</h4>
+                <h4 className="App-header-subtitle">
+                    Find all restaurants at the University of Delaware!
+                </h4>
             </header>
             <p></p>
             <Row>
