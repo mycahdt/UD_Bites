@@ -4,6 +4,4 @@
     display: grid;
     grid-template-columns: repeat(3, 273px);
     grid-template-rows: repeat(auto-fill, 1fr);
-    width: 900px;
-    margin-left: 0%;
 }

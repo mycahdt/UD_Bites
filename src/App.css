@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    color: black;
+    background-color: #fffbf7;
 }
 
 .App-logo {
@@ -31,7 +33,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #150f03;
     margin-bottom: 20px;
 }
 
@@ -47,15 +48,24 @@
 
 .App-filters {
     margin-left: 20px;
-    background-color: #aab5ae;
+    background-color: #dcc9b5;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.App-filter-title {
+    font-family: myHeaderTitleFont;
+    font-size: 250%;
 }
 
 .App-restaurants {
-    background-color: #d3c9bf;
+    background-color: #bccde1;
     margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+.App-rest-title {
+    font-family: myHeaderTitleFont;
+    font-size: 250%;
 }
 
 .App-link {
