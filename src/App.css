@@ -74,6 +74,16 @@
     border-radius: 7px;
 }
 
+.Price-filter {
+    margin-top: 10px;
+    margin-left: 0.2px;
+    margin-right: 0.2px;
+    padding-top: 3px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+}
+
 .App-restaurants {
     font-family: myHeaderSubTitleFont;
     background-color: #bccde1;

@@ -199,6 +199,49 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
+                        <Row className="Price-filter">
+                            <Col xs={2}>
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Price:
+                                    </h5>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div>
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-lowprice"
+                                        label="Low: $"
+                                        name="lowprice"
+                                        value="lowprice"
+                                        checked={lowPrice}
+                                        onChange={lowPriceFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-midprice"
+                                        label="Mid: $$"
+                                        name="midprice"
+                                        value="midprice"
+                                        checked={midPrice}
+                                        onChange={midPriceFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-highprice"
+                                        label="High: $$$"
+                                        name="highprice"
+                                        value="highprice"
+                                        checked={highPrice}
+                                        onChange={highPriceFn}
+                                    />
+                                </div>
+                            </Col>
+                        </Row>
                         <Row>
                             <Col style={{ paddingBottom: "10px" }}>
                                 <div>
@@ -316,42 +359,6 @@ function App(): JSX.Element {
                                             checked={chosenCuisine === cuisine}
                                         />
                                     ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <div>
-                                    <h5 className="App-filter-subtitles">
-                                        Prices:
-                                    </h5>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-lowprice"
-                                        label="Low Price: $"
-                                        name="lowprice"
-                                        value="lowprice"
-                                        checked={lowPrice}
-                                        onChange={lowPriceFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-midprice"
-                                        label="Mid Price: $$"
-                                        name="midprice"
-                                        value="midprice"
-                                        checked={midPrice}
-                                        onChange={midPriceFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-highprice"
-                                        label="High Price: $$$"
-                                        name="highprice"
-                                        value="highprice"
-                                        checked={highPrice}
-                                        onChange={highPriceFn}
-                                    />
                                 </div>
                             </Col>
                         </Row>
