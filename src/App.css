@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    color: black;
+    background-color: #fffbf7;
 }
 
 .App-logo {
@@ -13,25 +15,63 @@
     }
 }
 
+@font-face {
+    font-family: myHeaderTitleFont;
+    src: url(AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: myHeaderSubTitleFont;
+    src: url(Ubuntu-Regular.ttf);
+}
+
 .App-header {
     width: 100%;
-    background-color: #c7d3bf;
+    background-color: #f3bc58;
     min-height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
+    margin-bottom: 20px;
+}
+
+.App-header-title {
+    font-family: myHeaderTitleFont;
+    font-size: 400%;
+}
+
+.App-header-subtitle {
+    font-family: myHeaderSubTitleFont;
+    font-weight: bolder;
 }
 
 .App-filters {
+    font-family: myHeaderSubTitleFont;
+    background-color: #dcc9b5;
     margin-left: 20px;
-    background-color: #aab5ae;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.App-filter-title {
+    font-family: myHeaderTitleFont;
+    font-size: 250%;
 }
 
 .App-restaurants {
-    background-color: #d3c9bf;
+    font-family: myHeaderSubTitleFont;
+    background-color: #bccde1;
     margin-right: 20px;
+}
+
+.App-rest-title {
+    font-family: myHeaderTitleFont;
+    font-size: 250%;
+}
+
+.App-filter-subtitles {
+    font-weight: bolder;
 }
 
 .App-link {

@@ -3,7 +3,7 @@ import "./App.css";
 import my_restaurants from "./Data/restaurants.json";
 import { Restaurant } from "./Interfaces/restaurant";
 import { RestaurantList } from "./Components/RestaurantList";
-import { Col, Form, Row, Stack } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 
 const RESTAURANTS = my_restaurants.map(
     (theRest): Restaurant => ({
@@ -155,24 +155,33 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <h1 className="App-header-title">UD Bites</h1>
-                <h4>Find all restaurants at the University of Delaware!</h4>
+                <h4 className="App-header-subtitle">
+                    Find all restaurants at the University of Delaware!
+                </h4>
             </header>
-            <p></p>
             <Row>
-                <Col xs={6} md={4}>
+                <Col xs={4}>
                     <div
                         className="App-filters"
-                        style={{ position: "sticky", top: "18px" }}
+                        style={{ position: "sticky", top: "20px" }}
                     >
-                        <h2>Filters</h2>
+                        <h2
+                            className="App-filter-title"
+                            style={{ paddingTop: "10px" }}
+                        >
+                            Filters
+                        </h2>
                         <Row>
-                            <Col>
+                            <Col style={{ paddingBottom: "10px" }}>
                                 <div>
-                                    <h4>Service Options:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Service Options:
+                                    </h4>
                                     {services.map((service: string) => (
                                         <Form.Check
                                             key={service}
                                             type="radio"
+                                            inline
                                             name={service}
                                             id={service}
                                             label={service}
@@ -184,7 +193,7 @@ function App(): JSX.Element {
                                     <Form.Check
                                         type="checkbox"
                                         id="check-grubhub"
-                                        label="Must order with Grubhub"
+                                        label="Must order via Grubhub"
                                         name="grubhub"
                                         value="grubhub"
                                         checked={onlyGrubhub}
@@ -194,7 +203,9 @@ function App(): JSX.Element {
                             </Col>
                             <Col>
                                 <div>
-                                    <h4>Drinks:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Drinks:
+                                    </h4>
                                     <Form.Check
                                         type="checkbox"
                                         id="check-bar"
@@ -225,10 +236,11 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-
                         <Row>
                             <Col>
-                                <h4>Food Options:</h4>
+                                <h4 className="App-filter-subtitles">
+                                    Food Options:
+                                </h4>
                                 <div>
                                     <Form.Check
                                         type="checkbox"
@@ -261,7 +273,9 @@ function App(): JSX.Element {
                             </Col>
                             <Col>
                                 <div>
-                                    <h4>Cuisine Type:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Cuisine Type:
+                                    </h4>
                                     {cuisines.map((cuisine: string) => (
                                         <Form.Check
                                             key={cuisine}
@@ -280,7 +294,9 @@ function App(): JSX.Element {
                         <Row>
                             <Col>
                                 <div>
-                                    <h4>Prices:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Prices:
+                                    </h4>
                                     <Form.Check
                                         type="checkbox"
                                         id="check-lowprice"
@@ -312,7 +328,9 @@ function App(): JSX.Element {
                             </Col>
                             <Col>
                                 <div>
-                                    <h4>Location:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Location:
+                                    </h4>
                                     {locations.map((location: string) => (
                                         <Form.Check
                                             key={location}
@@ -333,7 +351,9 @@ function App(): JSX.Element {
                         <Row>
                             <Col>
                                 <div>
-                                    <h4>Meal:</h4>
+                                    <h4 className="App-filter-subtitles">
+                                        Meal:
+                                    </h4>
                                     {meals.map((meal: string) => (
                                         <Form.Check
                                             key={meal}
@@ -351,9 +371,14 @@ function App(): JSX.Element {
                         </Row>
                     </div>
                 </Col>
-                <Col xs={12} md={8}>
+                <Col xs={8}>
                     <div className="App-restaurants">
-                        <h2>Restaurants</h2>
+                        <h2
+                            className="App-rest-title"
+                            style={{ paddingTop: "10px" }}
+                        >
+                            Restaurants
+                        </h2>
                         <RestaurantList
                             restaurants={restaurants}
                             filterList={filterList}
@@ -363,7 +388,14 @@ function App(): JSX.Element {
                             chosenMeal={chosenMeal}
                         ></RestaurantList>
                     </div>
-                    <div>
+                </Col>
+            </Row>
+        </div>
+    );
+}
+
+/*
+<div>
                         <Stack>
                             {filterList.map((myFilter: string) => (
                                 <div
@@ -375,13 +407,6 @@ function App(): JSX.Element {
                             ))}
                         </Stack>
                     </div>
-                </Col>
-            </Row>
-        </div>
-    );
-}
-
-/*
 <div>
                 <Form.Check
                     type="checkbox"
