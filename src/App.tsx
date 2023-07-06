@@ -174,18 +174,23 @@ function App(): JSX.Element {
                         <Row>
                             <Col>
                                 <div className="Location-filter">
-                                    <h5 className="App-filter-subtitles">
+                                    <h5
+                                        className="App-filter-subtitles"
+                                        style={{
+                                            paddingTop: "7px",
+                                            paddingLeft: "11.5px"
+                                        }}
+                                    >
                                         Location:
                                     </h5>
                                     <Form.Select
                                         value={chosenLocation}
                                         onChange={updateLocation}
                                         style={{
-                                            width: "96%",
-                                            marginLeft: "2%",
-                                            marginRight: "2%"
+                                            width: "95%",
+                                            marginLeft: "2.5%",
+                                            marginRight: "2.5%"
                                         }}
-                                        background-color="pink"
                                     >
                                         {locations.map((location: string) => (
                                             <option
@@ -242,8 +247,8 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col style={{ paddingBottom: "10px" }}>
+                        <Row className="Service-filter">
+                            <Col>
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Service Options:
@@ -263,46 +268,13 @@ function App(): JSX.Element {
                                     ))}
                                     <Form.Check
                                         type="checkbox"
+                                        inline
                                         id="check-grubhub"
                                         label="Must order via Grubhub"
                                         name="grubhub"
                                         value="grubhub"
                                         checked={onlyGrubhub}
                                         onChange={grubhubFn}
-                                    />
-                                </div>
-                            </Col>
-                            <Col>
-                                <div>
-                                    <h5 className="App-filter-subtitles">
-                                        Drinks:
-                                    </h5>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-bar"
-                                        label="Bar"
-                                        name="bar"
-                                        value="bar"
-                                        checked={onlyBar}
-                                        onChange={barFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-boba"
-                                        label="Boba"
-                                        name="boba"
-                                        value="boba"
-                                        checked={onlyBoba}
-                                        onChange={bobaFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-coffee"
-                                        label="Coffee"
-                                        name="coffee"
-                                        value="coffee"
-                                        checked={onlyCoffee}
-                                        onChange={coffeeFn}
                                     />
                                 </div>
                             </Col>
@@ -380,6 +352,40 @@ function App(): JSX.Element {
                                             checked={chosenMeal === meal}
                                         />
                                     ))}
+                                </div>
+                            </Col>
+                            <Col>
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Drinks:
+                                    </h5>
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="check-bar"
+                                        label="Bar"
+                                        name="bar"
+                                        value="bar"
+                                        checked={onlyBar}
+                                        onChange={barFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="check-boba"
+                                        label="Boba"
+                                        name="boba"
+                                        value="boba"
+                                        checked={onlyBoba}
+                                        onChange={bobaFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="check-coffee"
+                                        label="Coffee"
+                                        name="coffee"
+                                        value="coffee"
+                                        checked={onlyCoffee}
+                                        onChange={coffeeFn}
+                                    />
                                 </div>
                             </Col>
                         </Row>
