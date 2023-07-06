@@ -52,6 +52,7 @@
     margin-left: 20px;
     padding-left: 2%;
     padding-right: 2%;
+    border-radius: 5px;
 }
 
 .App-filter-title {
@@ -59,19 +60,30 @@
     font-size: 250%;
 }
 
+.App-filter-subtitles {
+    font-weight: bolder;
+    padding-top: 4px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.Location-filter {
+    padding-bottom: 10px;
+    margin-top: 9px;
+    background-color: #f8f2eb;
+    border-radius: 7px;
+}
+
 .App-restaurants {
     font-family: myHeaderSubTitleFont;
     background-color: #bccde1;
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .App-rest-title {
     font-family: myHeaderTitleFont;
     font-size: 250%;
-}
-
-.App-filter-subtitles {
-    font-weight: bolder;
 }
 
 .App-link {

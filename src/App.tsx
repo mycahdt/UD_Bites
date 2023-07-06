@@ -143,7 +143,7 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
-    function updateLocation(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateLocation(event: React.ChangeEvent<HTMLSelectElement>) {
         setLocation(event.target.value);
     }
 
@@ -155,9 +155,9 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <h1 className="App-header-title">UD Bites</h1>
-                <h4 className="App-header-subtitle">
+                <h5 className="App-header-subtitle">
                     Find all restaurants at the University of Delaware!
-                </h4>
+                </h5>
             </header>
             <Row>
                 <Col xs={4}>
@@ -172,11 +172,39 @@ function App(): JSX.Element {
                             Filters
                         </h2>
                         <Row>
+                            <Col>
+                                <div className="Location-filter">
+                                    <h5 className="App-filter-subtitles">
+                                        Location:
+                                    </h5>
+                                    <Form.Select
+                                        value={chosenLocation}
+                                        onChange={updateLocation}
+                                        style={{
+                                            width: "96%",
+                                            marginLeft: "2%",
+                                            marginRight: "2%"
+                                        }}
+                                        background-color="pink"
+                                    >
+                                        {locations.map((location: string) => (
+                                            <option
+                                                key={location}
+                                                id={location}
+                                                label={location}
+                                                value={location}
+                                            />
+                                        ))}
+                                    </Form.Select>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
                             <Col style={{ paddingBottom: "10px" }}>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
                                         Service Options:
-                                    </h4>
+                                    </h5>
                                     {services.map((service: string) => (
                                         <Form.Check
                                             key={service}
@@ -203,9 +231,9 @@ function App(): JSX.Element {
                             </Col>
                             <Col>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
                                         Drinks:
-                                    </h4>
+                                    </h5>
                                     <Form.Check
                                         type="checkbox"
                                         id="check-bar"
@@ -238,9 +266,9 @@ function App(): JSX.Element {
                         </Row>
                         <Row>
                             <Col>
-                                <h4 className="App-filter-subtitles">
+                                <h5 className="App-filter-subtitles">
                                     Food Options:
-                                </h4>
+                                </h5>
                                 <div>
                                     <Form.Check
                                         type="checkbox"
@@ -273,9 +301,9 @@ function App(): JSX.Element {
                             </Col>
                             <Col>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
                                         Cuisine Type:
-                                    </h4>
+                                    </h5>
                                     {cuisines.map((cuisine: string) => (
                                         <Form.Check
                                             key={cuisine}
@@ -294,9 +322,9 @@ function App(): JSX.Element {
                         <Row>
                             <Col>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
                                         Prices:
-                                    </h4>
+                                    </h5>
                                     <Form.Check
                                         type="checkbox"
                                         id="check-lowprice"
@@ -326,34 +354,13 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col>
-                                <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Location:
-                                    </h4>
-                                    {locations.map((location: string) => (
-                                        <Form.Check
-                                            key={location}
-                                            type="radio"
-                                            name={location}
-                                            id={location}
-                                            label={location}
-                                            value={location}
-                                            onChange={updateLocation}
-                                            checked={
-                                                chosenLocation === location
-                                            }
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
                         </Row>
                         <Row>
                             <Col>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
                                         Meal:
-                                    </h4>
+                                    </h5>
                                     {meals.map((meal: string) => (
                                         <Form.Check
                                             key={meal}
@@ -395,6 +402,29 @@ function App(): JSX.Element {
 }
 
 /*
+
+<Col>
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Location:
+                                    </h5>
+                                    {locations.map((location: string) => (
+                                        <Form.Check
+                                            key={location}
+                                            type="radio"
+                                            name={location}
+                                            id={location}
+                                            label={location}
+                                            value={location}
+                                            onChange={updateLocation}
+                                            checked={
+                                                chosenLocation === location
+                                            }
+                                        />
+                                    ))}
+                                </div>
+                            </Col>
+
 <div>
                         <Stack>
                             {filterList.map((myFilter: string) => (
