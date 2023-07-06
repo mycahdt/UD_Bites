@@ -143,7 +143,7 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
-    function updateLocation(event: React.ChangeEvent<HTMLInputElement>) {
+    function updateLocation(event: React.ChangeEvent<HTMLSelectElement>) {
         setLocation(event.target.value);
     }
 
@@ -155,9 +155,9 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <h1 className="App-header-title">UD Bites</h1>
-                <h4 className="App-header-subtitle">
+                <h5 className="App-header-subtitle">
                     Find all restaurants at the University of Delaware!
-                </h4>
+                </h5>
             </header>
             <Row>
                 <Col xs={4}>
@@ -172,11 +172,87 @@ function App(): JSX.Element {
                             Filters
                         </h2>
                         <Row>
-                            <Col style={{ paddingBottom: "10px" }}>
+                            <Col>
+                                <div className="Location-filter">
+                                    <h5
+                                        className="App-filter-subtitles"
+                                        style={{
+                                            paddingTop: "7px",
+                                            paddingLeft: "11.5px"
+                                        }}
+                                    >
+                                        Location:
+                                    </h5>
+                                    <Form.Select
+                                        value={chosenLocation}
+                                        onChange={updateLocation}
+                                        style={{
+                                            width: "95%",
+                                            marginLeft: "2.5%",
+                                            marginRight: "2.5%"
+                                        }}
+                                    >
+                                        {locations.map((location: string) => (
+                                            <option
+                                                key={location}
+                                                id={location}
+                                                label={location}
+                                                value={location}
+                                            />
+                                        ))}
+                                    </Form.Select>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className="Price-filter">
+                            <Col xs={2}>
                                 <div>
-                                    <h4 className="App-filter-subtitles">
+                                    <h5 className="App-filter-subtitles">
+                                        Price:
+                                    </h5>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div>
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-lowprice"
+                                        label="Low: $"
+                                        name="lowprice"
+                                        value="lowprice"
+                                        checked={lowPrice}
+                                        onChange={lowPriceFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-midprice"
+                                        label="Mid: $$"
+                                        name="midprice"
+                                        value="midprice"
+                                        checked={midPrice}
+                                        onChange={midPriceFn}
+                                    />
+                                    <Form.Check
+                                        type="checkbox"
+                                        inline
+                                        id="check-highprice"
+                                        label="High: $$$"
+                                        name="highprice"
+                                        value="highprice"
+                                        checked={highPrice}
+                                        onChange={highPriceFn}
+                                    />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className="Service-filter">
+                            <Col>
+                                <div>
+                                    <h5 className="App-filter-subtitles">
                                         Service Options:
-                                    </h4>
+                                    </h5>
                                     {services.map((service: string) => (
                                         <Form.Check
                                             key={service}
@@ -192,6 +268,7 @@ function App(): JSX.Element {
                                     ))}
                                     <Form.Check
                                         type="checkbox"
+                                        inline
                                         id="check-grubhub"
                                         label="Must order via Grubhub"
                                         name="grubhub"
@@ -201,46 +278,50 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col>
+                        </Row>
+                        <Row>
+                            <Col className="Meal-filter">
                                 <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Drinks:
-                                    </h4>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-bar"
-                                        label="Bar"
-                                        name="bar"
-                                        value="bar"
-                                        checked={onlyBar}
-                                        onChange={barFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-boba"
-                                        label="Boba"
-                                        name="boba"
-                                        value="boba"
-                                        checked={onlyBoba}
-                                        onChange={bobaFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-coffee"
-                                        label="Coffee"
-                                        name="coffee"
-                                        value="coffee"
-                                        checked={onlyCoffee}
-                                        onChange={coffeeFn}
-                                    />
+                                    <h5 className="App-filter-subtitles">
+                                        Meal:
+                                    </h5>
+                                    {meals.map((meal: string) => (
+                                        <Form.Check
+                                            key={meal}
+                                            type="radio"
+                                            name={meal}
+                                            id={meal}
+                                            label={meal}
+                                            value={meal}
+                                            onChange={updateMeal}
+                                            checked={chosenMeal === meal}
+                                        />
+                                    ))}
+                                </div>
+                            </Col>
+                            <Col className="Cuisine-filter">
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Cuisine Type:
+                                    </h5>
+                                    {cuisines.map((cuisine: string) => (
+                                        <Form.Check
+                                            key={cuisine}
+                                            type="radio"
+                                            name={cuisine}
+                                            id={cuisine}
+                                            label={cuisine}
+                                            value={cuisine}
+                                            onChange={updateCuisine}
+                                            checked={chosenCuisine === cuisine}
+                                        />
+                                    ))}
                                 </div>
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
-                                <h4 className="App-filter-subtitles">
-                                    Food Options:
-                                </h4>
+                            <Col className="Food-filter">
+                                <h5 className="App-filter-subtitles">Food:</h5>
                                 <div>
                                     <Form.Check
                                         type="checkbox"
@@ -271,101 +352,38 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className="Drink-filter">
                                 <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Cuisine Type:
-                                    </h4>
-                                    {cuisines.map((cuisine: string) => (
-                                        <Form.Check
-                                            key={cuisine}
-                                            type="radio"
-                                            name={cuisine}
-                                            id={cuisine}
-                                            label={cuisine}
-                                            value={cuisine}
-                                            onChange={updateCuisine}
-                                            checked={chosenCuisine === cuisine}
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Prices:
-                                    </h4>
+                                    <h5 className="App-filter-subtitles">
+                                        Drinks:
+                                    </h5>
                                     <Form.Check
                                         type="checkbox"
-                                        id="check-lowprice"
-                                        label="Low Price: $"
-                                        name="lowprice"
-                                        value="lowprice"
-                                        checked={lowPrice}
-                                        onChange={lowPriceFn}
+                                        id="check-bar"
+                                        label="Bar"
+                                        name="bar"
+                                        value="bar"
+                                        checked={onlyBar}
+                                        onChange={barFn}
                                     />
                                     <Form.Check
                                         type="checkbox"
-                                        id="check-midprice"
-                                        label="Mid Price: $$"
-                                        name="midprice"
-                                        value="midprice"
-                                        checked={midPrice}
-                                        onChange={midPriceFn}
+                                        id="check-boba"
+                                        label="Boba"
+                                        name="boba"
+                                        value="boba"
+                                        checked={onlyBoba}
+                                        onChange={bobaFn}
                                     />
                                     <Form.Check
                                         type="checkbox"
-                                        id="check-highprice"
-                                        label="High Price: $$$"
-                                        name="highprice"
-                                        value="highprice"
-                                        checked={highPrice}
-                                        onChange={highPriceFn}
+                                        id="check-coffee"
+                                        label="Coffee"
+                                        name="coffee"
+                                        value="coffee"
+                                        checked={onlyCoffee}
+                                        onChange={coffeeFn}
                                     />
-                                </div>
-                            </Col>
-                            <Col>
-                                <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Location:
-                                    </h4>
-                                    {locations.map((location: string) => (
-                                        <Form.Check
-                                            key={location}
-                                            type="radio"
-                                            name={location}
-                                            id={location}
-                                            label={location}
-                                            value={location}
-                                            onChange={updateLocation}
-                                            checked={
-                                                chosenLocation === location
-                                            }
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <div>
-                                    <h4 className="App-filter-subtitles">
-                                        Meal:
-                                    </h4>
-                                    {meals.map((meal: string) => (
-                                        <Form.Check
-                                            key={meal}
-                                            type="radio"
-                                            name={meal}
-                                            id={meal}
-                                            label={meal}
-                                            value={meal}
-                                            onChange={updateMeal}
-                                            checked={chosenMeal === meal}
-                                        />
-                                    ))}
                                 </div>
                             </Col>
                         </Row>
@@ -395,6 +413,29 @@ function App(): JSX.Element {
 }
 
 /*
+
+<Col>
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Location:
+                                    </h5>
+                                    {locations.map((location: string) => (
+                                        <Form.Check
+                                            key={location}
+                                            type="radio"
+                                            name={location}
+                                            id={location}
+                                            label={location}
+                                            value={location}
+                                            onChange={updateLocation}
+                                            checked={
+                                                chosenLocation === location
+                                            }
+                                        />
+                                    ))}
+                                </div>
+                            </Col>
+
 <div>
                         <Stack>
                             {filterList.map((myFilter: string) => (

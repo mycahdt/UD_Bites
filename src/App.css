@@ -52,6 +52,8 @@
     margin-left: 20px;
     padding-left: 2%;
     padding-right: 2%;
+    border-radius: 5px;
+    padding-bottom: 4%;
 }
 
 .App-filter-title {
@@ -59,19 +61,104 @@
     font-size: 250%;
 }
 
+.App-filter-subtitles {
+    font-weight: bolder;
+    padding-top: 4px;
+    text-align: left;
+}
+
+.Location-filter {
+    padding-bottom: 10px;
+    margin-top: 8px;
+    background-color: #f8f2eb;
+    border-radius: 7px;
+}
+
+.Price-filter {
+    margin-top: 10px;
+    margin-left: 0.2px;
+    margin-right: 0.2px;
+    padding-top: 3px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.Service-filter {
+    margin-top: 10px;
+    margin-left: 0.2px;
+    margin-right: 0.2px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.Meal-filter {
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 1.5%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.Cuisine-filter {
+    margin-top: 10px;
+    margin-right: 3%;
+    margin-left: 1.5%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.Food-filter {
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 1.5%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.Drink-filter {
+    margin-top: 10px;
+    margin-right: 3%;
+    margin-left: 1.5%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    background-color: #f8f2eb;
+    align-items: center;
+    border-radius: 7px;
+    text-align: left;
+}
+
 .App-restaurants {
     font-family: myHeaderSubTitleFont;
     background-color: #bccde1;
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .App-rest-title {
     font-family: myHeaderTitleFont;
     font-size: 250%;
-}
-
-.App-filter-subtitles {
-    font-weight: bolder;
 }
 
 .App-link {
