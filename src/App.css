@@ -47,8 +47,9 @@
 }
 
 .App-filters {
-    margin-left: 20px;
+    font-family: myHeaderSubTitleFont;
     background-color: #dcc9b5;
+    margin-left: 20px;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -59,6 +60,7 @@
 }
 
 .App-restaurants {
+    font-family: myHeaderSubTitleFont;
     background-color: #bccde1;
     margin-right: 20px;
 }
@@ -66,6 +68,10 @@
 .App-rest-title {
     font-family: myHeaderTitleFont;
     font-size: 250%;
+}
+
+.App-filter-subtitles {
+    font-weight: bolder;
 }
 
 .App-link {
