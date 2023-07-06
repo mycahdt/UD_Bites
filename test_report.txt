@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 FAIL src/App.test.tsx
-  ✕ renders the word UD somewhere (217 ms)
+  ✕ renders the word UD somewhere (214 ms)
 
   ● renders the word UD somewhere
 
@@ -43,22 +43,26 @@ FAIL src/App.test.tsx
             [36m>[39m
               [0mUD Bites[0m
             [36m</h1>[39m
-            [36m<h4>[39m
+            [36m<h4[39m
+              [33mclass[39m=[32m"App-header-subtitle"[39m
+            [36m>[39m
               [0mFind all restaurants at the University of Delaware![0m
             [36m</h4>[39m
           [36m</header>[39m
-          [36m<p />[39m
           [36m<div[39m
             [33mclass[39m=[32m"row"[39m
           [36m>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"col-md-4 col-6"[39m
+              [33mclass[39m=[32m"col-4"[39m
             [36m>[39m
               [36m<div[39m
                 [33mclass[39m=[32m"App-filters"[39m
-                [33mstyle[39m=[32m"position: sticky; top: 18px;"[39m
+                [33mstyle[39m=[32m"position: sticky; top: 20px;"[39m
               [36m>[39m
-                [36m<h2>[39m
+                [36m<h2[39m
+                  [33mclass[39m=[32m"App-filter-title"[39m
+                  [33mstyle[39m=[32m"padding-top: 10px;"[39m
+                [36m>[39m
                   [0mFilters[0m
                 [36m</h2>[39m
                 [36m<div[39m
@@ -66,13 +70,16 @@ FAIL src/App.test.tsx
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"col"[39m
+                    [33mstyle[39m=[32m"padding-bottom: 10px;"[39m
                   [36m>[39m
                     [36m<div>[39m
-                      [36m<h4>[39m
+                      [36m<h4[39m
+                        [33mclass[39m=[32m"App-filter-subtitles"[39m
+                      [36m>[39m
                         [0mService Options:[0m
                       [36m</h4>[39m
                       [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
                       [36m>[39m
                         [36m<input[39m
                           [33mchecked[39m=[32m""[39m
@@ -91,7 +98,7 @@ FAIL src/App.test.tsx
                         [36m</label>[39m
                       [36m</div>[39m
                       [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
                       [36m>[39m
                         [36m<input[39m
                           [33mclass[39m=[32m"form-check-input"[39m
@@ -109,7 +116,7 @@ FAIL src/App.test.tsx
                         [36m</label>[39m
                       [36m</div>[39m
                       [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
                       [36m>[39m
                         [36m<input[39m
                           [33mclass[39m=[32m"form-check-input"[39m
@@ -141,7 +148,7 @@ FAIL src/App.test.tsx
                           [33mfor[39m=[32m"check-grubhub"[39m
                           [33mtitle[39m=[32m""[39m
                         [36m>[39m
-                          [0mMust order with Grubhub[0m
+                          [0mMust order via Grubhub[0m
                         [36m</label>[39m
                       [36m</div>[39m
                     [36m</div>[39m
@@ -150,7 +157,9 @@ FAIL src/App.test.tsx
                     [33mclass[39m=[32m"col"[39m
                   [36m>[39m
                     [36m<div>[39m
-                      [36m<h4>[39m
+                      [36m<h4[39m
+                        [33mclass[39m=[32m"App-filter-subtitles"[39m
+                      [36m>[39m
                         [0mDrinks:[0m
                       [36m</h4>[39m
                       [36m<div[39m
@@ -182,19 +191,7 @@ FAIL src/App.test.tsx
                           [33mvalue[39m=[32m"boba"[39m
                         [36m/>[39m
                         [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"check-boba"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0mBoba[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                     ...
+                          [33mclass[39m=[32m"form-check-la...
 
        5 | test("renders the word UD somewhere", () => {
        6 |     render(<App />);
@@ -218,9 +215,9 @@ FAIL src/App.test.tsx
 ---------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                 
 ---------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------
-All files            |   33.33 |    34.66 |    20.4 |    33.1 |                                                                                                                   
- src                 |    39.7 |        0 |   26.08 |   40.29 |                                                                                                                   
-  App.tsx            |    39.7 |        0 |   26.08 |   40.29 | 69-151,369                                                                                                        
+All files            |   33.55 |    34.66 |   20.83 |   33.33 |                                                                                                                   
+ src                 |   40.29 |        0 |   27.27 |    40.9 |                                                                                                                   
+  App.tsx            |   40.29 |        0 |   27.27 |    40.9 | 69-151                                                                                                            
  src/Components      |   28.04 |    35.61 |   15.38 |   27.16 |                                                                                                                   
   RestaurantList.tsx |   27.16 |    35.61 |      12 |   26.25 | 27-53,59-60,63-64,70-71,75-76,81-82,85-86,91-94,97-99,112-113,118-121,127-130,136-139,142-144,147-149,152-154,171 
   RestaurantView.tsx |     100 |      100 |     100 |     100 |                                                                                                                   
@@ -230,5 +227,5 @@ All files            |   33.33 |    34.66 |    20.4 |    33.1 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.463 s
+Time:        2.531 s
 Ran all test suites.
