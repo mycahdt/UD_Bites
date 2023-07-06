@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 FAIL src/App.test.tsx
-  ✕ renders the word UD somewhere (214 ms)
+  ✕ renders the word UD somewhere (204 ms)
 
   ● renders the word UD somewhere
 
@@ -43,11 +43,11 @@ FAIL src/App.test.tsx
             [36m>[39m
               [0mUD Bites[0m
             [36m</h1>[39m
-            [36m<h4[39m
+            [36m<h5[39m
               [33mclass[39m=[32m"App-header-subtitle"[39m
             [36m>[39m
               [0mFind all restaurants at the University of Delaware![0m
-            [36m</h4>[39m
+            [36m</h5>[39m
           [36m</header>[39m
           [36m<div[39m
             [33mclass[39m=[32m"row"[39m
@@ -70,128 +70,127 @@ FAIL src/App.test.tsx
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"col"[39m
-                    [33mstyle[39m=[32m"padding-bottom: 10px;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"Location-filter"[39m
+                    [36m>[39m
+                      [36m<h5[39m
+                        [33mclass[39m=[32m"App-filter-subtitles"[39m
+                        [33mstyle[39m=[32m"padding-top: 7px; padding-left: 11.5px;"[39m
+                      [36m>[39m
+                        [0mLocation:[0m
+                      [36m</h5>[39m
+                      [36m<select[39m
+                        [33mclass[39m=[32m"form-select"[39m
+                        [33mstyle[39m=[32m"width: 95%; margin-left: 2.5%; margin-right: 2.5%;"[39m
+                      [36m>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"None"[39m
+                          [33mlabel[39m=[32m"None"[39m
+                          [33mvalue[39m=[32m"None"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"Main Street"[39m
+                          [33mlabel[39m=[32m"Main Street"[39m
+                          [33mvalue[39m=[32m"Main Street"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"Trabant"[39m
+                          [33mlabel[39m=[32m"Trabant"[39m
+                          [33mvalue[39m=[32m"Trabant"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"Perkins"[39m
+                          [33mlabel[39m=[32m"Perkins"[39m
+                          [33mvalue[39m=[32m"Perkins"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"S Main Street"[39m
+                          [33mlabel[39m=[32m"S Main Street"[39m
+                          [33mvalue[39m=[32m"S Main Street"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"Newark Shopping Center"[39m
+                          [33mlabel[39m=[32m"Newark Shopping Center"[39m
+                          [33mvalue[39m=[32m"Newark Shopping Center"[39m
+                        [36m/>[39m
+                        [36m<option[39m
+                          [33mid[39m=[32m"Other Locations"[39m
+                          [33mlabel[39m=[32m"Other Locations"[39m
+                          [33mvalue[39m=[32m"Other Locations"[39m
+                        [36m/>[39m
+                      [36m</select>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"Price-filter row"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"col-2"[39m
                   [36m>[39m
                     [36m<div>[39m
-                      [36m<h4[39m
+                      [36m<h5[39m
                         [33mclass[39m=[32m"App-filter-subtitles"[39m
                       [36m>[39m
-                        [0mService Options:[0m
-                      [36m</h4>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check form-check-inline"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mchecked[39m=[32m""[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"No Service Selected"[39m
-                          [33mname[39m=[32m"No Service Selected"[39m
-                          [33mtype[39m=[32m"radio"[39m
-                          [33mvalue[39m=[32m"No Service Selected"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"No Service Selected"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0mNo Service Selected[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check form-check-inline"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"Sitdown"[39m
-                          [33mname[39m=[32m"Sitdown"[39m
-                          [33mtype[39m=[32m"radio"[39m
-                          [33mvalue[39m=[32m"Sitdown"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"Sitdown"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0mSitdown[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check form-check-inline"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"Takeout"[39m
-                          [33mname[39m=[32m"Takeout"[39m
-                          [33mtype[39m=[32m"radio"[39m
-                          [33mvalue[39m=[32m"Takeout"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"Takeout"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0mTakeout[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"check-grubhub"[39m
-                          [33mname[39m=[32m"grubhub"[39m
-                          [33mtype[39m=[32m"checkbox"[39m
-                          [33mvalue[39m=[32m"grubhub"[39m
-                        [36m/>[39m
-                        [36m<label[39m
-                          [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"check-grubhub"[39m
-                          [33mtitle[39m=[32m""[39m
-                        [36m>[39m
-                          [0mMust order via Grubhub[0m
-                        [36m</label>[39m
-                      [36m</div>[39m
+                        [0mPrice:[0m
+                      [36m</h5>[39m
                     [36m</div>[39m
                   [36m</div>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"col"[39m
                   [36m>[39m
                     [36m<div>[39m
-                      [36m<h4[39m
-                        [33mclass[39m=[32m"App-filter-subtitles"[39m
-                      [36m>[39m
-                        [0mDrinks:[0m
-                      [36m</h4>[39m
                       [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
                       [36m>[39m
                         [36m<input[39m
                           [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"check-bar"[39m
-                          [33mname[39m=[32m"bar"[39m
+                          [33mid[39m=[32m"check-lowprice"[39m
+                          [33mname[39m=[32m"lowprice"[39m
                           [33mtype[39m=[32m"checkbox"[39m
-                          [33mvalue[39m=[32m"bar"[39m
+                          [33mvalue[39m=[32m"lowprice"[39m
                         [36m/>[39m
                         [36m<label[39m
                           [33mclass[39m=[32m"form-check-label"[39m
-                          [33mfor[39m=[32m"check-bar"[39m
+                          [33mfor[39m=[32m"check-lowprice"[39m
                           [33mtitle[39m=[32m""[39m
                         [36m>[39m
-                          [0mBar[0m
+                          [0mLow: $[0m
                         [36m</label>[39m
                       [36m</div>[39m
                       [36m<div[39m
-                        [33mclass[39m=[32m"form-check"[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
                       [36m>[39m
                         [36m<input[39m
                           [33mclass[39m=[32m"form-check-input"[39m
-                          [33mid[39m=[32m"check-boba"[39m
-                          [33mname[39m=[32m"boba"[39m
+                          [33mid[39m=[32m"check-midprice"[39m
+                          [33mname[39m=[32m"midprice"[39m
                           [33mtype[39m=[32m"checkbox"[39m
-                          [33mvalue[39m=[32m"boba"[39m
+                          [33mvalue[39m=[32m"midprice"[39m
                         [36m/>[39m
                         [36m<label[39m
-                          [33mclass[39m=[32m"form-check-la...
+                          [33mclass[39m=[32m"form-check-label"[39m
+                          [33mfor[39m=[32m"check-midprice"[39m
+                          [33mtitle[39m=[32m""[39m
+                        [36m>[39m
+                          [0mMid: $$[0m
+                        [36m</label>[39m
+                      [36m</div>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"form-check form-check-inline"[39m
+                      [36m>[39m
+                        [36m<input[39m
+                          [33mclass[39m=[32m"form-check-input"[39m
+                          [33mid[39m=[32m"check-highprice"[39m
+                          [33mname[39m=[32m"highprice"[39m
+                          [33mtype[39m=[32m"checkbox"[39m
+                          [33mvalue[39m=[32m"highprice"[39m
+                        [36m/>[39m
+                        [36m<label[39m
+                          [33mclass[39m=[32m"form-check-label"[39m
+                          [33mfor[39m=[32m"check-highprice"[39m
+                          [33mtitle[39m=...
 
        5 | test("renders the word UD somewhere", () => {
        6 |     render(<App />);
@@ -227,5 +226,5 @@ All files            |   33.55 |    34.66 |   20.83 |   33.33 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.531 s
+Time:        2.534 s
 Ran all test suites.
