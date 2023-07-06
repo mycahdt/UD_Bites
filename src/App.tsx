@@ -280,10 +280,48 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
-                                <h5 className="App-filter-subtitles">
-                                    Food Options:
-                                </h5>
+                            <Col className="Meal-filter">
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Meal:
+                                    </h5>
+                                    {meals.map((meal: string) => (
+                                        <Form.Check
+                                            key={meal}
+                                            type="radio"
+                                            name={meal}
+                                            id={meal}
+                                            label={meal}
+                                            value={meal}
+                                            onChange={updateMeal}
+                                            checked={chosenMeal === meal}
+                                        />
+                                    ))}
+                                </div>
+                            </Col>
+                            <Col className="Cuisine-filter">
+                                <div>
+                                    <h5 className="App-filter-subtitles">
+                                        Cuisine Type:
+                                    </h5>
+                                    {cuisines.map((cuisine: string) => (
+                                        <Form.Check
+                                            key={cuisine}
+                                            type="radio"
+                                            name={cuisine}
+                                            id={cuisine}
+                                            label={cuisine}
+                                            value={cuisine}
+                                            onChange={updateCuisine}
+                                            checked={chosenCuisine === cuisine}
+                                        />
+                                    ))}
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="Food-filter">
+                                <h5 className="App-filter-subtitles">Food:</h5>
                                 <div>
                                     <Form.Check
                                         type="checkbox"
@@ -314,47 +352,7 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col>
-                                <div>
-                                    <h5 className="App-filter-subtitles">
-                                        Cuisine Type:
-                                    </h5>
-                                    {cuisines.map((cuisine: string) => (
-                                        <Form.Check
-                                            key={cuisine}
-                                            type="radio"
-                                            name={cuisine}
-                                            id={cuisine}
-                                            label={cuisine}
-                                            value={cuisine}
-                                            onChange={updateCuisine}
-                                            checked={chosenCuisine === cuisine}
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <div>
-                                    <h5 className="App-filter-subtitles">
-                                        Meal:
-                                    </h5>
-                                    {meals.map((meal: string) => (
-                                        <Form.Check
-                                            key={meal}
-                                            type="radio"
-                                            name={meal}
-                                            id={meal}
-                                            label={meal}
-                                            value={meal}
-                                            onChange={updateMeal}
-                                            checked={chosenMeal === meal}
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
-                            <Col>
+                            <Col className="Drink-filter">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Drinks:
