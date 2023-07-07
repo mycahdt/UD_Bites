@@ -1,11 +1,8 @@
 .container {
     column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 273px);
     grid-template-rows: repeat(auto-fill, 1fr);
-}
-
-.Restaurant-list {
-    background-color: #f8f9fa;
+    margin-top: 7px;
 }

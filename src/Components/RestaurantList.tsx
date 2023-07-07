@@ -184,15 +184,14 @@ export function RestaurantList({
     ) : (
         <div>
             <Container>
-                <div className="container" style={{ marginTop: "7px" }}>
+                <div className="container">
                     {restaurants.map((restaurant: Restaurant) => (
                         <div
                             key={restaurant.name}
-                            className="bg-light border border-dark"
+                            className="border border-secondary m-1 p-3"
                             style={{
                                 borderRadius: "4px",
-                                paddingTop: "5px",
-                                paddingBottom: "5px"
+                                backgroundColor: "#fffbf7"
                             }}
                         >
                             <RestaurantView

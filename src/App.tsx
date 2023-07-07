@@ -155,14 +155,14 @@ function App(): JSX.Element {
         <div className="App">
             <header className="App-header">
                 <h1 className="App-header-title">UD Bites</h1>
-                <h5 className="App-header-subtitle">
+                <h4 className="App-header-subtitle">
                     Find all restaurants at the University of Delaware!
-                </h5>
+                </h4>
             </header>
             <Row>
                 <Col xs={4}>
                     <div
-                        className="App-filters border border-dark"
+                        className="App-filters border border-secondary"
                         style={{
                             position: "sticky",
                             top: "20px"
@@ -176,7 +176,7 @@ function App(): JSX.Element {
                         </h2>
                         <Row>
                             <Col>
-                                <div className="Location-filter border border-dark">
+                                <div className="Location-filter border">
                                     <h5
                                         className="App-filter-subtitles"
                                         style={{
@@ -207,7 +207,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Price-filter border border-dark">
+                        <Row className="Price-filter border">
                             <Col xs={2}>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -250,7 +250,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Service-filter border border-dark">
+                        <Row className="Service-filter border">
                             <Col>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -283,7 +283,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Meal-filter border border-dark">
+                            <Col className="Meal-filter border">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Meal:
@@ -302,7 +302,7 @@ function App(): JSX.Element {
                                     ))}
                                 </div>
                             </Col>
-                            <Col className="Cuisine-filter border border-dark">
+                            <Col className="Cuisine-filter border">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Cuisine Type:
@@ -323,7 +323,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Food-filter border border-dark">
+                            <Col className="Food-filter border">
                                 <h5 className="App-filter-subtitles">Food:</h5>
                                 <div>
                                     <Form.Check
@@ -355,7 +355,7 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col className="Drink-filter border border-dark">
+                            <Col className="Drink-filter border">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Drinks:
@@ -393,7 +393,7 @@ function App(): JSX.Element {
                     </div>
                 </Col>
                 <Col xs={8}>
-                    <div className="App-restaurants border border-dark">
+                    <div className="App-restaurants border border-secondary">
                         <h2
                             className="App-rest-title"
                             style={{ paddingTop: "10px" }}
