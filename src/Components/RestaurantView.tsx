@@ -8,8 +8,8 @@ export function RestaurantView({
 }): JSX.Element {
     return (
         <div>
-            <h3>Name: {restaurant.name}</h3>
-            <h4>Price: {restaurant.price}</h4>
+            <h4 style={{ fontWeight: "bold" }}>{restaurant.name}</h4>
+            <h5>Price: {restaurant.price}</h5>
         </div>
     );
 }

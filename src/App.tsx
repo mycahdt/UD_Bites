@@ -162,8 +162,11 @@ function App(): JSX.Element {
             <Row>
                 <Col xs={4}>
                     <div
-                        className="App-filters"
-                        style={{ position: "sticky", top: "20px" }}
+                        className="App-filters border border-dark"
+                        style={{
+                            position: "sticky",
+                            top: "20px"
+                        }}
                     >
                         <h2
                             className="App-filter-title"
@@ -173,7 +176,7 @@ function App(): JSX.Element {
                         </h2>
                         <Row>
                             <Col>
-                                <div className="Location-filter">
+                                <div className="Location-filter border border-dark">
                                     <h5
                                         className="App-filter-subtitles"
                                         style={{
@@ -204,7 +207,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Price-filter">
+                        <Row className="Price-filter border border-dark">
                             <Col xs={2}>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -247,7 +250,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Service-filter">
+                        <Row className="Service-filter border border-dark">
                             <Col>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -280,7 +283,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Meal-filter">
+                            <Col className="Meal-filter border border-dark">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Meal:
@@ -299,7 +302,7 @@ function App(): JSX.Element {
                                     ))}
                                 </div>
                             </Col>
-                            <Col className="Cuisine-filter">
+                            <Col className="Cuisine-filter border border-dark">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Cuisine Type:
@@ -320,7 +323,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Food-filter">
+                            <Col className="Food-filter border border-dark">
                                 <h5 className="App-filter-subtitles">Food:</h5>
                                 <div>
                                     <Form.Check
@@ -352,7 +355,7 @@ function App(): JSX.Element {
                                     />
                                 </div>
                             </Col>
-                            <Col className="Drink-filter">
+                            <Col className="Drink-filter border border-dark">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Drinks:
@@ -390,7 +393,7 @@ function App(): JSX.Element {
                     </div>
                 </Col>
                 <Col xs={8}>
-                    <div className="App-restaurants">
+                    <div className="App-restaurants border border-dark">
                         <h2
                             className="App-rest-title"
                             style={{ paddingTop: "10px" }}
