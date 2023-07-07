@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 FAIL src/App.test.tsx
-  ✕ renders the word UD somewhere (204 ms)
+  ✕ renders the word UD somewhere (575 ms)
 
   ● renders the word UD somewhere
 
@@ -22,10 +22,12 @@ FAIL src/App.test.tsx
     [36m</h1>[39m
 
     Ignored nodes: comments, <script />, <style />
-    [36m<h3>[39m
-      [0mName: [0m
+    [36m<h4[39m
+      [33mclass[39m=[32m"border border-secondary"[39m
+      [33mstyle[39m=[32m"font-weight: bold; background-color: rgb(243, 188, 88); padding: 7px; border-radius: 4px;"[39m
+    [36m>[39m
       [0mUDairy Creamery Cafe[0m
-    [36m</h3>[39m
+    [36m</h4>[39m
 
     (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
 
@@ -43,11 +45,11 @@ FAIL src/App.test.tsx
             [36m>[39m
               [0mUD Bites[0m
             [36m</h1>[39m
-            [36m<h5[39m
+            [36m<h4[39m
               [33mclass[39m=[32m"App-header-subtitle"[39m
             [36m>[39m
               [0mFind all restaurants at the University of Delaware![0m
-            [36m</h5>[39m
+            [36m</h4>[39m
           [36m</header>[39m
           [36m<div[39m
             [33mclass[39m=[32m"row"[39m
@@ -56,7 +58,7 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"col-4"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"App-filters"[39m
+                [33mclass[39m=[32m"App-filters border border-secondary"[39m
                 [33mstyle[39m=[32m"position: sticky; top: 20px;"[39m
               [36m>[39m
                 [36m<h2[39m
@@ -72,7 +74,7 @@ FAIL src/App.test.tsx
                     [33mclass[39m=[32m"col"[39m
                   [36m>[39m
                     [36m<div[39m
-                      [33mclass[39m=[32m"Location-filter"[39m
+                      [33mclass[39m=[32m"Location-filter border"[39m
                     [36m>[39m
                       [36m<h5[39m
                         [33mclass[39m=[32m"App-filter-subtitles"[39m
@@ -124,7 +126,7 @@ FAIL src/App.test.tsx
                   [36m</div>[39m
                 [36m</div>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"Price-filter row"[39m
+                  [33mclass[39m=[32m"Price-filter border row"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"col-2"[39m
@@ -190,7 +192,7 @@ FAIL src/App.test.tsx
                         [36m<label[39m
                           [33mclass[39m=[32m"form-check-label"[39m
                           [33mfor[39m=[32m"check-highprice"[39m
-                          [33mtitle[39m=...
+     ...
 
        5 | test("renders the word UD somewhere", () => {
        6 |     render(<App />);
@@ -226,5 +228,5 @@ All files            |   33.55 |    34.66 |   20.83 |   33.33 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.534 s
+Time:        2.923 s
 Ran all test suites.
