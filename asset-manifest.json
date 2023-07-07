@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/UD_Bites/static/css/main.91529888.css",
-    "main.js": "/UD_Bites/static/js/main.254cea33.js",
+    "main.js": "/UD_Bites/static/js/main.e3e2bd5c.js",
     "static/js/787.4ef7427d.chunk.js": "/UD_Bites/static/js/787.4ef7427d.chunk.js",
     "static/media/Ubuntu-Regular.ttf": "/UD_Bites/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/AbrilFatface-Regular.ttf": "/UD_Bites/static/media/AbrilFatface-Regular.c2459f7f69cb5eb788d8.ttf",
     "index.html": "/UD_Bites/index.html",
     "main.91529888.css.map": "/UD_Bites/static/css/main.91529888.css.map",
-    "main.254cea33.js.map": "/UD_Bites/static/js/main.254cea33.js.map",
+    "main.e3e2bd5c.js.map": "/UD_Bites/static/js/main.e3e2bd5c.js.map",
     "787.4ef7427d.chunk.js.map": "/UD_Bites/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91529888.css",
-    "static/js/main.254cea33.js"
+    "static/js/main.e3e2bd5c.js"
   ]
 }
