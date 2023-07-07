@@ -181,6 +181,7 @@ export function RestaurantList({
                             ></RestaurantView>
                         </div>
                     ))}
+                    <p>Filtered view</p>
                 </div>
             </Container>
         </div>
