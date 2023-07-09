@@ -3,7 +3,7 @@ import "./App.css";
 import my_restaurants from "./Data/restaurants.json";
 import { Restaurant } from "./Interfaces/restaurant";
 import { RestaurantList } from "./Components/RestaurantList";
-import { Col, Form, Row } from "react-bootstrap";
+import { Button, Col, Form, Row } from "react-bootstrap";
 
 const RESTAURANTS = my_restaurants.map(
     (theRest): Restaurant => ({
@@ -118,6 +118,20 @@ function App(): JSX.Element {
     function updateDrinks(event: React.ChangeEvent<HTMLInputElement>) {
         console.log("The event was: " + event.target.value);
         setDrink(event.target.value);
+    }
+
+    function clearFilters() {
+        setLocation(locations[0]);
+        setLowPrice(false);
+        setMidPrice(false);
+        setHighPrice(false);
+        setService(services[0]);
+        setOnlyGrubhub(false);
+        setMeal(meals[0]);
+        setCuisine(cuisines[0]);
+        setFood(foodChoices[0]);
+        setDrink(drinks[0]);
+        setFilterList([]);
     }
 
     return (
@@ -330,6 +344,20 @@ function App(): JSX.Element {
                                     ))}
                                 </div>
                             </Col>
+                        </Row>
+                        <Row>
+                            <div style={{ marginTop: "2%" }}>
+                                <Button
+                                    style={{
+                                        backgroundColor: "#bccde1",
+                                        color: "black",
+                                        fontWeight: "bold"
+                                    }}
+                                    onClick={clearFilters}
+                                >
+                                    Clear All Filters
+                                </Button>
+                            </div>
                         </Row>
                     </div>
                 </Col>
