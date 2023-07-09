@@ -20,12 +20,11 @@ const locations = [
     "Newark Shopping Center",
     "Other Locations"
 ];
-
 const services = ["No Service Selected", "Sitdown", "Takeout"];
-
-const cuisines = ["No Cuisine Selected", "Asian", "Mexican"];
-
 const meals = ["No Meal Selected", "Brunch", "Lunch and Dinner"];
+const cuisines = ["No Cuisine Selected", "Asian", "Mexican"];
+const foodChoices = ["No Food Selected", "Bowls", "Pizza", "Dessert"];
+const drinks = ["No Drink Selected", "Bar", "Boba", "Coffee"];
 
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
@@ -33,33 +32,35 @@ function App(): JSX.Element {
 
     // Initialize the state for all filters
 
-    // Service filters
-    const [chosenService, setService] = useState<string>(services[0]);
-    const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
-
-    // Drink filters
-    const [onlyBar, setOnlyBar] = useState<boolean>(false);
-    const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
-    const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
-
-    // Food filters
-    const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
-    const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
-    const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
-
-    // Cuisine filters
-    const [chosenCuisine, setCuisine] = useState<string>(cuisines[0]);
+    // Location filters
+    const [chosenLocation, setLocation] = useState<string>(locations[0]);
 
     // Price filters
     const [lowPrice, setLowPrice] = useState<boolean>(false);
     const [midPrice, setMidPrice] = useState<boolean>(false);
     const [highPrice, setHighPrice] = useState<boolean>(false);
 
-    // Location filters
-    const [chosenLocation, setLocation] = useState<string>(locations[0]);
+    // Service filters
+    const [chosenService, setService] = useState<string>(services[0]);
+    const [onlyGrubhub, setOnlyGrubhub] = useState<boolean>(false);
 
     // Meal filters
     const [chosenMeal, setMeal] = useState<string>(meals[0]);
+
+    // Cuisine filters
+    const [chosenCuisine, setCuisine] = useState<string>(cuisines[0]);
+
+    // Food filters
+    const [chosenFood, setFood] = useState<string>(foodChoices[0]);
+    //const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
+    //const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
+    //const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
+
+    // Drink filters
+    const [chosenDrink, setDrink] = useState<string>(drinks[0]);
+    //const [onlyBar, setOnlyBar] = useState<boolean>(false);
+    //const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
+    //const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
 
     // filterList - an array of filters
     const [filterList, setFilterList] = useState<string[]>([]);
@@ -74,55 +75,8 @@ function App(): JSX.Element {
         }
     }
 
-    function updateService(event: React.ChangeEvent<HTMLInputElement>) {
-        setService(event.target.value);
-    }
-
-    function grubhubFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyGrubhub(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function barFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBar(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function bobaFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBoba(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function coffeeFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyCoffee(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function bowlsFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBowls(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyPizza(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function dessertFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyDessert(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function updateCuisine(event: React.ChangeEvent<HTMLInputElement>) {
-        console.log("The event was: " + event.target.value);
-        setCuisine(event.target.value);
+    function updateLocation(event: React.ChangeEvent<HTMLSelectElement>) {
+        setLocation(event.target.value);
     }
 
     function lowPriceFn(event: React.ChangeEvent<HTMLInputElement>) {
@@ -143,12 +97,33 @@ function App(): JSX.Element {
         updateFilters(event);
     }
 
-    function updateLocation(event: React.ChangeEvent<HTMLSelectElement>) {
-        setLocation(event.target.value);
+    function updateService(event: React.ChangeEvent<HTMLInputElement>) {
+        setService(event.target.value);
+    }
+
+    function grubhubFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyGrubhub(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
     }
 
     function updateMeal(event: React.ChangeEvent<HTMLInputElement>) {
         setMeal(event.target.value);
+    }
+
+    function updateCuisine(event: React.ChangeEvent<HTMLInputElement>) {
+        console.log("The event was: " + event.target.value);
+        setCuisine(event.target.value);
+    }
+
+    function updateFood(event: React.ChangeEvent<HTMLInputElement>) {
+        console.log("The event was: " + event.target.value);
+        setFood(event.target.value);
+    }
+
+    function updateDrinks(event: React.ChangeEvent<HTMLInputElement>) {
+        console.log("The event was: " + event.target.value);
+        setDrink(event.target.value);
     }
 
     return (
@@ -324,35 +299,22 @@ function App(): JSX.Element {
                         </Row>
                         <Row>
                             <Col className="Food-filter border">
-                                <h5 className="App-filter-subtitles">Food:</h5>
                                 <div>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-bowls"
-                                        label="Bowls"
-                                        name="bowls"
-                                        value="bowls"
-                                        checked={onlyBowls}
-                                        onChange={bowlsFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-pizza"
-                                        label="Pizza"
-                                        name="pizza"
-                                        value="pizza"
-                                        checked={onlyPizza}
-                                        onChange={pizzaFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-dessert"
-                                        label="Dessert"
-                                        name="dessert"
-                                        value="dessert"
-                                        checked={onlyDessert}
-                                        onChange={dessertFn}
-                                    />
+                                    <h5 className="App-filter-subtitles">
+                                        Food:
+                                    </h5>
+                                    {foodChoices.map((food: string) => (
+                                        <Form.Check
+                                            key={food}
+                                            type="radio"
+                                            name={food}
+                                            id={food}
+                                            label={food}
+                                            value={food}
+                                            onChange={updateFood}
+                                            checked={chosenFood === food}
+                                        />
+                                    ))}
                                 </div>
                             </Col>
                             <Col className="Drink-filter border">
@@ -360,33 +322,18 @@ function App(): JSX.Element {
                                     <h5 className="App-filter-subtitles">
                                         Drinks:
                                     </h5>
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-bar"
-                                        label="Bar"
-                                        name="bar"
-                                        value="bar"
-                                        checked={onlyBar}
-                                        onChange={barFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-boba"
-                                        label="Boba"
-                                        name="boba"
-                                        value="boba"
-                                        checked={onlyBoba}
-                                        onChange={bobaFn}
-                                    />
-                                    <Form.Check
-                                        type="checkbox"
-                                        id="check-coffee"
-                                        label="Coffee"
-                                        name="coffee"
-                                        value="coffee"
-                                        checked={onlyCoffee}
-                                        onChange={coffeeFn}
-                                    />
+                                    {drinks.map((drink: string) => (
+                                        <Form.Check
+                                            key={drink}
+                                            type="radio"
+                                            name={drink}
+                                            id={drink}
+                                            label={drink}
+                                            value={drink}
+                                            onChange={updateDrinks}
+                                            checked={chosenDrink === drink}
+                                        />
+                                    ))}
                                 </div>
                             </Col>
                         </Row>
@@ -407,6 +354,8 @@ function App(): JSX.Element {
                             chosenService={chosenService}
                             chosenCuisine={chosenCuisine}
                             chosenMeal={chosenMeal}
+                            chosenFood={chosenFood}
+                            chosenDrink={chosenDrink}
                         ></RestaurantList>
                     </div>
                 </Col>
@@ -416,6 +365,24 @@ function App(): JSX.Element {
 }
 
 /*
+
+function barFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBar(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function bobaFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBoba(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function coffeeFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyCoffee(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
 
 <Col>
                                 <div>
@@ -463,5 +430,25 @@ function App(): JSX.Element {
                 />
             </div>
 */
+
+/*
+    function bowlsFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyBowls(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyPizza(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+
+    function dessertFn(event: React.ChangeEvent<HTMLInputElement>) {
+        setOnlyDessert(event.target.checked);
+        console.log(event.target.checked);
+        updateFilters(event);
+    }
+    */
 
 export default App;
