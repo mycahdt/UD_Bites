@@ -67,7 +67,7 @@ export function RestaurantList({
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.brunch
             );
-        } else if (chosenMeal === "Lunch and Dinner") {
+        } else if (chosenMeal === "Lunch" || chosenMeal === "Dinner") {
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.lunchdinner
             );
@@ -82,6 +82,12 @@ export function RestaurantList({
             //console.log("Asian was chosen");
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.mexican
+            );
+        } else if (chosenCuisine === "Other") {
+            //console.log("Asian was chosen");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    !restaurant.asian && !restaurant.mexican
             );
         }
 

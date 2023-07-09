@@ -21,8 +21,8 @@ const locations = [
     "Other Locations"
 ];
 const services = ["No Service Selected", "Sitdown", "Takeout"];
-const meals = ["No Meal Selected", "Brunch", "Lunch and Dinner"];
-const cuisines = ["No Cuisine Selected", "Asian", "Mexican"];
+const meals = ["No Meal Selected", "Brunch", "Lunch", "Dinner"];
+const cuisines = ["No Cuisine Selected", "Asian", "Mexican", "Other"];
 const foodChoices = ["No Food Selected", "Bowls", "Pizza", "Dessert"];
 const drinks = ["No Drink Selected", "Bar", "Boba", "Coffee"];
 
@@ -52,15 +52,9 @@ function App(): JSX.Element {
 
     // Food filters
     const [chosenFood, setFood] = useState<string>(foodChoices[0]);
-    //const [onlyBowls, setOnlyBowls] = useState<boolean>(false);
-    //const [onlyPizza, setOnlyPizza] = useState<boolean>(false);
-    //const [onlyDessert, setOnlyDessert] = useState<boolean>(false);
 
     // Drink filters
     const [chosenDrink, setDrink] = useState<string>(drinks[0]);
-    //const [onlyBar, setOnlyBar] = useState<boolean>(false);
-    //const [onlyBoba, setOnlyBoba] = useState<boolean>(false);
-    //const [onlyCoffee, setOnlyCoffee] = useState<boolean>(false);
 
     // filterList - an array of filters
     const [filterList, setFilterList] = useState<string[]>([]);
