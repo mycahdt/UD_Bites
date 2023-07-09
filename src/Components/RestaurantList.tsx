@@ -11,7 +11,9 @@ export function RestaurantList({
     chosenLocation,
     chosenService,
     chosenCuisine,
-    chosenMeal
+    chosenMeal,
+    chosenFood,
+    chosenDrink
 }: {
     restaurants: Restaurant[];
     filterList: string[];
@@ -19,6 +21,8 @@ export function RestaurantList({
     chosenService: string;
     chosenCuisine: string;
     chosenMeal: string;
+    chosenFood: string;
+    chosenDrink: string;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
@@ -28,38 +32,42 @@ export function RestaurantList({
                 currentRestaurants = currentRestaurants.filter(
                     (restaurant: Restaurant): boolean => restaurant.grubhub
                 );
-            } else if (filterList[i] === "bar") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.bar
-                );
-            } else if (filterList[i] === "boba") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.boba
-                );
-            } else if (filterList[i] === "coffee") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.coffee
-                );
-            } else if (filterList[i] === "bowls") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.bowls
-                );
-            } else if (filterList[i] === "pizza") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.pizza
-                );
-            } else if (filterList[i] === "dessert") {
-                currentRestaurants = currentRestaurants.filter(
-                    (restaurant: Restaurant): boolean => restaurant.dessert
-                );
             }
+        }
+
+        if (chosenDrink === "Bar") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.bar
+            );
+        } else if (chosenDrink === "Boba") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.boba
+            );
+        } else if (chosenDrink === "Coffee") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.coffee
+            );
+        }
+
+        if (chosenFood === "Bowls") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.bowls
+            );
+        } else if (chosenFood === "Pizza") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.pizza
+            );
+        } else if (chosenFood === "Dessert") {
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean => restaurant.dessert
+            );
         }
 
         if (chosenMeal === "Brunch") {
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.brunch
             );
-        } else if (chosenMeal === "Lunch and Dinner") {
+        } else if (chosenMeal === "Lunch" || chosenMeal === "Dinner") {
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.lunchdinner
             );
@@ -74,6 +82,12 @@ export function RestaurantList({
             //console.log("Asian was chosen");
             currentRestaurants = currentRestaurants.filter(
                 (restaurant: Restaurant): boolean => restaurant.mexican
+            );
+        } else if (chosenCuisine === "Other") {
+            //console.log("Asian was chosen");
+            currentRestaurants = currentRestaurants.filter(
+                (restaurant: Restaurant): boolean =>
+                    !restaurant.asian && !restaurant.mexican
             );
         }
 
@@ -163,7 +177,9 @@ export function RestaurantList({
         chosenLocation !== "None" ||
         chosenService !== "No Service Selected" ||
         chosenCuisine !== "No Cuisine Selected" ||
-        chosenMeal !== "No Meal Selected" ? (
+        chosenMeal !== "No Meal Selected" ||
+        chosenFood !== "No Food Selected" ||
+        chosenDrink !== "No Drink Selected" ? (
         <div>
             <Container>
                 <div className="container">
@@ -181,7 +197,6 @@ export function RestaurantList({
                             ></RestaurantView>
                         </div>
                     ))}
-                    <p>Filtered view</p>
                 </div>
             </Container>
         </div>
