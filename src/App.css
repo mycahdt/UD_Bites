@@ -53,12 +53,13 @@
     padding-left: 2%;
     padding-right: 2%;
     border-radius: 5px;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
 }
 
 .App-filter-title {
     font-family: myHeaderTitleFont;
     font-size: 250%;
+    padding-bottom: 3px;
 }
 
 .App-filter-subtitles {
