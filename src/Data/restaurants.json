@@ -16,7 +16,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Bing's Bakery",
@@ -35,7 +36,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Pobu",
@@ -54,7 +56,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Banh Mi Boy",
@@ -73,7 +76,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Season's Pizza",
@@ -92,7 +96,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Papa Johns Pizza",
@@ -111,7 +116,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Sinclair's Cafe Ltd",
@@ -130,7 +136,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Ali Baba Mid Eastern Restaurant",
@@ -149,7 +156,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Kakure Bistro",
@@ -168,7 +176,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Ramen Kumamoto",
@@ -187,7 +196,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Santa Fe Mexican Grill",
@@ -206,7 +216,8 @@
         "asian": false,
         "mexican": true,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Freddy's Wings and Wraps",
@@ -225,7 +236,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Oishii Ocean Japanese & Cajun Seafood",
@@ -244,7 +256,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "2SPizza",
@@ -263,7 +276,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Bowba Cha Bubble Tea",
@@ -282,7 +296,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Iron Hill Brewery & Restaurant",
@@ -301,7 +316,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Klondike Kate's Restaurant & Saloon",
@@ -320,7 +336,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Starbucks",
@@ -339,7 +356,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Little Goat Coffee Roasting Co",
@@ -358,7 +376,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Chipotle Mexican Grill",
@@ -377,7 +396,8 @@
         "asian": false,
         "mexican": true,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Playa Bowls",
@@ -396,7 +416,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Tasty Wok",
@@ -415,7 +436,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Home Grown Cafe",
@@ -434,7 +456,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Five Guys",
@@ -453,7 +476,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "MOCHINUT",
@@ -472,7 +496,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "The Original Hot Bagels",
@@ -491,7 +516,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Roots Natural Kitchen",
@@ -510,7 +536,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Oishii Sushi & Ramen",
@@ -529,7 +556,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "El Diablo Burritos",
@@ -548,7 +576,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Taverna Newark",
@@ -567,7 +596,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Stone Balloon Ale House",
@@ -586,7 +616,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Tbaar",
@@ -605,7 +636,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Chef Tan",
@@ -624,7 +656,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Hamilton's on Main",
@@ -643,7 +676,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Kung Fu Tea",
@@ -662,7 +696,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Surreal Creamery",
@@ -681,7 +716,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "UDairy Creamery Cafe",
@@ -700,7 +736,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Caffe Gelato",
@@ -719,7 +756,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "The Peach Blossom Eatery",
@@ -738,7 +776,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Comma Cafe",
@@ -757,7 +796,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Indian Sizzler",
@@ -776,7 +816,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Insomnia Cookies",
@@ -795,7 +836,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "QDOBA Mexican Eats",
@@ -814,7 +856,8 @@
         "asian": false,
         "mexican": true,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "honeygrow",
@@ -833,7 +876,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Coloful Yun Nan",
@@ -852,7 +896,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Dunkin'",
@@ -871,7 +916,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Brew HaHa!",
@@ -890,7 +936,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Grotto Pizza",
@@ -909,7 +956,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Snap Custom Pizza and Salads",
@@ -928,7 +976,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "m2o Burgers & Salads",
@@ -947,7 +996,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Newark Deli & Bagels",
@@ -966,7 +1016,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Deer Park Tavern",
@@ -985,7 +1036,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Vita Nova",
@@ -1004,7 +1056,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Stomping Grounds ft. Little Goat Coffee Roasting CO",
@@ -1023,7 +1076,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Chick-fil-A",
@@ -1042,7 +1096,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Quiznos",
@@ -1061,7 +1116,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Claymont",
@@ -1080,7 +1136,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Greens to Go",
@@ -1099,7 +1156,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "International Food Creations",
@@ -1118,7 +1176,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Drip Cafe",
@@ -1137,7 +1196,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Domino's Pizza",
@@ -1156,7 +1216,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Ecogrounds",
@@ -1175,7 +1236,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "The Nest",
@@ -1194,7 +1256,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Dunkin.'",
@@ -1213,7 +1276,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Flip Kitchen",
@@ -1232,7 +1296,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "DE Slider Co",
@@ -1251,7 +1316,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "The Den",
@@ -1270,7 +1336,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Desserts by Dana",
@@ -1289,7 +1356,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Einstein Bros. Bagels",
@@ -1308,7 +1376,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Claymont Steak Shop",
@@ -1327,7 +1396,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Bing's Bake & Brew",
@@ -1346,7 +1416,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Tastea 101",
@@ -1365,7 +1436,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Buffalo Wild Wings",
@@ -1384,7 +1456,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Atexquita Restaurant Mexican Grill & Bar",
@@ -1403,7 +1476,8 @@
         "asian": false,
         "mexican": true,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Cafeneo",
@@ -1422,7 +1496,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Pat's Pizza & Pasta (temporarily closed)",
@@ -1441,7 +1516,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Barley Craft Beer and Whiskey Bar (temporarily closed)",
@@ -1460,7 +1536,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "bb.q Chicken South Main St Plaza",
@@ -1479,7 +1556,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "TIGER SUGER",
@@ -1498,7 +1576,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "The Green Turtle Sports Bar & Grille",
@@ -1517,7 +1596,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "D.P. Dough Newark ",
@@ -1536,7 +1616,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Kong Pao Palace",
@@ -1555,7 +1636,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Margherita's Pizza",
@@ -1574,7 +1656,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Wayback Burger",
@@ -1593,7 +1676,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Wingstop",
@@ -1612,7 +1696,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Kung Fu Hot Pot",
@@ -1631,7 +1716,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Caf\u00e9 67",
@@ -1650,7 +1736,8 @@
         "asian": false,
         "mexican": false,
         "brunch": true,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Capriotti's Sandwich Shop",
@@ -1669,7 +1756,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "QualiTea",
@@ -1688,7 +1776,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "Rita's Italian Ice & Frozen Custard",
@@ -1707,7 +1796,8 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": false
+        "lunchdinner": false,
+        "liked": false
     },
     {
         "name": "No. 1 Chinese",
@@ -1726,7 +1816,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Poke Bros",
@@ -1745,7 +1836,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Pho Ever Cafe",
@@ -1764,7 +1856,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Mayflower Japanese Restaurant",
@@ -1783,7 +1876,8 @@
         "asian": true,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     },
     {
         "name": "Big Z Pizza",
@@ -1802,6 +1896,7 @@
         "asian": false,
         "mexican": false,
         "brunch": false,
-        "lunchdinner": true
+        "lunchdinner": true,
+        "liked": false
     }
 ]

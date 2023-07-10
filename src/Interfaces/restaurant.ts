@@ -16,4 +16,5 @@ export interface Restaurant {
     mexican: boolean;
     brunch: boolean;
     lunchdinner: boolean;
+    liked: boolean;
 }

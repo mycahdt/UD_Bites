@@ -13,7 +13,9 @@ export function RestaurantList({
     chosenCuisine,
     chosenMeal,
     chosenFood,
-    chosenDrink
+    chosenDrink,
+    addToFavs,
+    deleteFavs
 }: {
     restaurants: Restaurant[];
     filterList: string[];
@@ -23,6 +25,8 @@ export function RestaurantList({
     chosenMeal: string;
     chosenFood: string;
     chosenDrink: string;
+    addToFavs: (restaurantName: string) => void;
+    deleteFavs: (restaurantName: string) => void;
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
@@ -194,6 +198,8 @@ export function RestaurantList({
                         >
                             <RestaurantView
                                 restaurant={restaurant}
+                                addToFavs={addToFavs}
+                                deleteFavs={deleteFavs}
                             ></RestaurantView>
                         </div>
                     ))}
@@ -207,7 +213,7 @@ export function RestaurantList({
                     {restaurants.map((restaurant: Restaurant) => (
                         <div
                             key={restaurant.name}
-                            className="border border-secondary m-1 p-3"
+                            className="border border-dark m-1 p-3"
                             style={{
                                 borderRadius: "4px",
                                 backgroundColor: "#fffbf7"
@@ -215,6 +221,8 @@ export function RestaurantList({
                         >
                             <RestaurantView
                                 restaurant={restaurant}
+                                addToFavs={addToFavs}
+                                deleteFavs={deleteFavs}
                             ></RestaurantView>
                         </div>
                     ))}

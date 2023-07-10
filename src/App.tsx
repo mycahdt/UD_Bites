@@ -4,6 +4,7 @@ import my_restaurants from "./Data/restaurants.json";
 import { Restaurant } from "./Interfaces/restaurant";
 import { RestaurantList } from "./Components/RestaurantList";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import { FavoriteRestaurants } from "./Components/FavoriteRestaurants";
 
 const RESTAURANTS = my_restaurants.map(
     (theRest): Restaurant => ({
@@ -29,6 +30,11 @@ const drinks = ["No Drink Selected", "Bar", "Boba", "Coffee"];
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
     const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
+
+    // Favorite restaurants
+    const [favoriteRestaurants, setFavoriteRestaurants] = useState<
+        Restaurant[]
+    >([]);
 
     // Initialize the state for all filters
 
@@ -134,6 +140,26 @@ function App(): JSX.Element {
         setFilterList([]);
     }
 
+    function addToFavs(restaurantName: string) {
+        const newFav = restaurants.find(
+            (restaurant: Restaurant): boolean =>
+                restaurant.name === restaurantName
+        );
+        if (newFav !== undefined) {
+            if (!favoriteRestaurants.includes(newFav)) {
+                setFavoriteRestaurants([...favoriteRestaurants, newFav]);
+            }
+        }
+    }
+
+    function deleteFavs(restaurantName: string) {
+        setFavoriteRestaurants(
+            favoriteRestaurants.filter(
+                (rest: Restaurant): boolean => rest.name !== restaurantName
+            )
+        );
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -142,6 +168,12 @@ function App(): JSX.Element {
                     Find all restaurants at the University of Delaware!
                 </h4>
             </header>
+            <Row>
+                <p>Favorites</p>
+                <FavoriteRestaurants
+                    favoriteRestaurants={favoriteRestaurants}
+                ></FavoriteRestaurants>
+            </Row>
             <Row>
                 <Col xs={4}>
                     <div
@@ -351,7 +383,11 @@ function App(): JSX.Element {
                                     style={{
                                         backgroundColor: "#bccde1",
                                         color: "black",
-                                        fontWeight: "bold"
+                                        fontWeight: "bold",
+                                        borderLeftColor: "black",
+                                        borderTopColor: "black",
+                                        borderRightColor: "black",
+                                        borderBottomColor: "black"
                                     }}
                                     onClick={clearFilters}
                                 >
@@ -378,6 +414,8 @@ function App(): JSX.Element {
                             chosenMeal={chosenMeal}
                             chosenFood={chosenFood}
                             chosenDrink={chosenDrink}
+                            addToFavs={addToFavs}
+                            deleteFavs={deleteFavs}
                         ></RestaurantList>
                     </div>
                 </Col>
