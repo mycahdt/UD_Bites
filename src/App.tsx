@@ -29,7 +29,7 @@ const drinks = ["No Drink Selected", "Bar", "Boba", "Coffee"];
 
 function App(): JSX.Element {
     // restaurants - an array of all restaurants
-    const [restaurants] = useState<Restaurant[]>(RESTAURANTS);
+    const [restaurants, setRestaurants] = useState<Restaurant[]>(RESTAURANTS);
 
     // Favorite restaurants
     const [favoriteRestaurants, setFavoriteRestaurants] = useState<
@@ -160,6 +160,22 @@ function App(): JSX.Element {
         );
     }
 
+    function updateSwitchOff(restaurantName: string) {
+        const myRest = restaurants.find(
+            (restaurant: Restaurant): boolean =>
+                restaurant.name === restaurantName
+        );
+        if (myRest !== undefined) {
+            myRest.liked = !myRest.liked;
+            setRestaurants(
+                restaurants.map(
+                    (rest: Restaurant): Restaurant =>
+                        rest.name !== restaurantName ? rest : myRest
+                )
+            );
+        }
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -172,6 +188,8 @@ function App(): JSX.Element {
                 <p>Favorites</p>
                 <FavoriteRestaurants
                     favoriteRestaurants={favoriteRestaurants}
+                    deleteFavs={deleteFavs}
+                    updateSwitchOff={updateSwitchOff}
                 ></FavoriteRestaurants>
             </Row>
             <Row>
@@ -416,6 +434,7 @@ function App(): JSX.Element {
                             chosenDrink={chosenDrink}
                             addToFavs={addToFavs}
                             deleteFavs={deleteFavs}
+                            favoriteRestaurants={favoriteRestaurants}
                         ></RestaurantList>
                     </div>
                 </Col>
@@ -423,92 +442,5 @@ function App(): JSX.Element {
         </div>
     );
 }
-
-/*
-
-function barFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBar(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function bobaFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBoba(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function coffeeFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyCoffee(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-<Col>
-                                <div>
-                                    <h5 className="App-filter-subtitles">
-                                        Location:
-                                    </h5>
-                                    {locations.map((location: string) => (
-                                        <Form.Check
-                                            key={location}
-                                            type="radio"
-                                            name={location}
-                                            id={location}
-                                            label={location}
-                                            value={location}
-                                            onChange={updateLocation}
-                                            checked={
-                                                chosenLocation === location
-                                            }
-                                        />
-                                    ))}
-                                </div>
-                            </Col>
-
-<div>
-                        <Stack>
-                            {filterList.map((myFilter: string) => (
-                                <div
-                                    key={myFilter}
-                                    className="bg-light border m-2 p-2"
-                                >
-                                    {myFilter}
-                                </div>
-                            ))}
-                        </Stack>
-                    </div>
-<div>
-                <Form.Check
-                    type="checkbox"
-                    id="check-sitdown"
-                    label="Sitdown"
-                    name="sitdown"
-                    value="sitdown"
-                    checked={onlySitdown}
-                    onChange={sitdownFn}
-                />
-            </div>
-*/
-
-/*
-    function bowlsFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyBowls(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function pizzaFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyPizza(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-
-    function dessertFn(event: React.ChangeEvent<HTMLInputElement>) {
-        setOnlyDessert(event.target.checked);
-        console.log(event.target.checked);
-        updateFilters(event);
-    }
-    */
 
 export default App;

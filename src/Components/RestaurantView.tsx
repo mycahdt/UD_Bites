@@ -5,13 +5,21 @@ import { Form, Table } from "react-bootstrap";
 export function RestaurantView({
     restaurant,
     addToFavs,
-    deleteFavs
+    deleteFavs,
+    favoriteRestaurants
 }: {
     restaurant: Restaurant;
     addToFavs: (restaurantName: string) => void;
     deleteFavs: (restaurantName: string) => void;
+    favoriteRestaurants: Restaurant[];
 }): JSX.Element {
     const [isLiked, setLiked] = useState<boolean>(restaurant.liked);
+    function updateToggle() {
+        setLiked(!isLiked);
+    }
+    if (!favoriteRestaurants.includes(restaurant) && isLiked === true) {
+        updateToggle();
+    }
     function updateLiked(event: React.ChangeEvent<HTMLInputElement>) {
         setLiked(event.target.checked);
         console.log("Like status: " + event.target.checked);
@@ -68,7 +76,13 @@ export function RestaurantView({
                             <h5 style={{ fontWeight: "bold" }}>Menu: </h5>
                         </td>
                         <td>
-                            <a href={restaurant.menu}>Click for menu!</a>
+                            <a
+                                href={restaurant.menu}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Click for menu!
+                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -95,21 +109,3 @@ export function RestaurantView({
         </div>
     );
 }
-
-/*
- <Button
-                    size="sm"
-                    style={{
-                        width: "100%",
-                        backgroundColor: "#dcc9b5",
-                        color: "black",
-                        fontWeight: "bold",
-                        borderLeftColor: "black",
-                        borderTopColor: "black",
-                        borderRightColor: "black",
-                        borderBottomColor: "black"
-                    }}
-                >
-                    + Add to Favorites!
-                </Button>
- */
