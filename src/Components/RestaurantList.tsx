@@ -13,7 +13,10 @@ export function RestaurantList({
     chosenCuisine,
     chosenMeal,
     chosenFood,
-    chosenDrink
+    chosenDrink,
+    addToFavs,
+    deleteFavs,
+    favoriteRestaurants
 }: {
     restaurants: Restaurant[];
     filterList: string[];
@@ -23,6 +26,9 @@ export function RestaurantList({
     chosenMeal: string;
     chosenFood: string;
     chosenDrink: string;
+    addToFavs: (restaurantName: string) => void;
+    deleteFavs: (restaurantName: string) => void;
+    favoriteRestaurants: Restaurant[];
 }): JSX.Element {
     function allFilters() {
         let currentRestaurants: Restaurant[] = restaurants;
@@ -194,6 +200,9 @@ export function RestaurantList({
                         >
                             <RestaurantView
                                 restaurant={restaurant}
+                                addToFavs={addToFavs}
+                                deleteFavs={deleteFavs}
+                                favoriteRestaurants={favoriteRestaurants}
                             ></RestaurantView>
                         </div>
                     ))}
@@ -207,7 +216,7 @@ export function RestaurantList({
                     {restaurants.map((restaurant: Restaurant) => (
                         <div
                             key={restaurant.name}
-                            className="border border-secondary m-1 p-3"
+                            className="border border-dark m-1 p-3"
                             style={{
                                 borderRadius: "4px",
                                 backgroundColor: "#fffbf7"
@@ -215,6 +224,9 @@ export function RestaurantList({
                         >
                             <RestaurantView
                                 restaurant={restaurant}
+                                addToFavs={addToFavs}
+                                deleteFavs={deleteFavs}
+                                favoriteRestaurants={favoriteRestaurants}
                             ></RestaurantView>
                         </div>
                     ))}
@@ -223,18 +235,3 @@ export function RestaurantList({
         </div>
     );
 }
-
-/*
-            <Stack gap={3}>
-                {restaurants.map((restaurant: Restaurant) => (
-                    <div
-                        key={restaurant.name}
-                        className="bg-light border m-2 p-2"
-                    >
-                        <RestaurantView
-                            restaurant={restaurant}
-                        ></RestaurantView>
-                    </div>
-                ))}
-            </Stack>
-*/
