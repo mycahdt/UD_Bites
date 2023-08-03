@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 FAIL src/App.test.tsx
-  ✕ renders the word UD somewhere (1113 ms)
+  ✕ renders the word UD somewhere (805 ms)
 
   ● renders the word UD somewhere
 
@@ -54,17 +54,14 @@ FAIL src/App.test.tsx
           [36m<div[39m
             [33mclass[39m=[32m"row"[39m
           [36m>[39m
-            [36m<p>[39m
-              [0mFavorites[0m
-            [36m</p>[39m
             [36m<div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"container"[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mstyle[39m=[32m"margin-bottom: 20px; background-color: rgb(220, 201, 181); color: black; font-weight: bold; border-left-color: black; border-top-color: black; border-right-color: black; border-bottom-color: black;"[39m
+                [33mtype[39m=[32m"button"[39m
               [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"container"[39m
-                [36m/>[39m
-              [36m</div>[39m
+                [0mShow/Hide Favorite Restaurants[0m
+              [36m</button>[39m
             [36m</div>[39m
           [36m</div>[39m
           [36m<div[39m
@@ -74,7 +71,7 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"col-4"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"App-filters border border-secondary"[39m
+                [33mclass[39m=[32m"App-filters border border-dark border-2"[39m
                 [33mstyle[39m=[32m"position: sticky; top: 20px;"[39m
               [36m>[39m
                 [36m<h2[39m
@@ -90,7 +87,7 @@ FAIL src/App.test.tsx
                     [33mclass[39m=[32m"col"[39m
                   [36m>[39m
                     [36m<div[39m
-                      [33mclass[39m=[32m"Location-filter border"[39m
+                      [33mclass[39m=[32m"Location-filter border border-secondary"[39m
                     [36m>[39m
                       [36m<h5[39m
                         [33mclass[39m=[32m"App-filter-subtitles"[39m
@@ -142,7 +139,7 @@ FAIL src/App.test.tsx
                   [36m</div>[39m
                 [36m</div>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"Price-filter border row"[39m
+                  [33mclass[39m=[32m"Price-filter border border-secondary row"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"col-2"[39m
@@ -195,11 +192,7 @@ FAIL src/App.test.tsx
                           [0mMid: $$[0m
                         [36m</label>[39m
                       [36m</div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"form-check form-check-inline"[39m
-                      [36m>[39m
-                        [36m<input[39m
-                          [33mclass[39m=[32m"form-check-in...
+                      [36m<di...
 
        5 | test("renders the word UD somewhere", () => {
        6 |     render(<App />);
@@ -223,11 +216,11 @@ FAIL src/App.test.tsx
 --------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                                                   
 --------------------------|---------|----------|---------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-All files                 |   33.88 |    41.23 |   21.31 |    33.7 |                                                                                                                                                                     
- src                      |   35.89 |        0 |   28.57 |   36.36 |                                                                                                                                                                     
-  App.tsx                 |   35.89 |        0 |   28.57 |   36.36 | 70-173                                                                                                                                                              
- src/Components           |   32.35 |    45.97 |   15.15 |   31.68 |                                                                                                                                                                     
-  FavoriteRestaurants.tsx |      20 |      100 |      25 |      20 | 28-29,37-133                                                                                                                                                        
+All files                 |   33.51 |    41.41 |   19.35 |   33.33 |                                                                                                                                                                     
+ src                      |   36.25 |     8.33 |   27.58 |    36.7 |                                                                                                                                                                     
+  App.tsx                 |   36.25 |     8.33 |   27.58 |    36.7 | 73-176,203                                                                                                                                                          
+ src/Components           |   31.37 |    45.97 |   12.12 |   30.69 |                                                                                                                                                                     
+  FavoriteRestaurants.tsx |       0 |      100 |       0 |       0 | 17-122                                                                                                                                                              
   RestaurantList.tsx      |   34.52 |    45.67 |   11.53 |   33.73 | 37-39,45-46,49-50,53-54,59-60,63-64,67-68,73-74,77-78,84-85,89-90,94-96,101-102,105-106,111-114,117-119,132-133,138-141,147-150,156-159,162-164,167-169,172-174,193 
   RestaurantView.tsx      |   23.07 |       50 |   33.33 |   23.07 | 18,21-32                                                                                                                                                            
  src/Interfaces           |       0 |        0 |       0 |       0 |                                                                                                                                                                     
@@ -236,5 +229,5 @@ All files                 |   33.88 |    41.23 |   21.31 |    33.7 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.432 s
+Time:        3.337 s
 Ran all test suites.

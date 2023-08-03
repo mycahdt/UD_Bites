@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/UD_Bites/static/css/main.a134c19d.css",
-    "main.js": "/UD_Bites/static/js/main.9b24afd2.js",
+    "main.css": "/UD_Bites/static/css/main.b2cd1d61.css",
+    "main.js": "/UD_Bites/static/js/main.95bdc60f.js",
     "static/js/787.4ef7427d.chunk.js": "/UD_Bites/static/js/787.4ef7427d.chunk.js",
     "static/media/Ubuntu-Regular.ttf": "/UD_Bites/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/AbrilFatface-Regular.ttf": "/UD_Bites/static/media/AbrilFatface-Regular.c2459f7f69cb5eb788d8.ttf",
     "index.html": "/UD_Bites/index.html",
-    "main.a134c19d.css.map": "/UD_Bites/static/css/main.a134c19d.css.map",
-    "main.9b24afd2.js.map": "/UD_Bites/static/js/main.9b24afd2.js.map",
+    "main.b2cd1d61.css.map": "/UD_Bites/static/css/main.b2cd1d61.css.map",
+    "main.95bdc60f.js.map": "/UD_Bites/static/js/main.95bdc60f.js.map",
     "787.4ef7427d.chunk.js.map": "/UD_Bites/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a134c19d.css",
-    "static/js/main.9b24afd2.js"
+    "static/css/main.b2cd1d61.css",
+    "static/js/main.95bdc60f.js"
   ]
 }
