@@ -13,17 +13,6 @@ export function FavoriteRestaurants({
     deleteFavs: (restaurantName: string) => void;
     updateSwitchOff: (restaurantName: string) => void;
 }): JSX.Element {
-    /*
-    function getFavorites() {
-        let favRestaurants: Restaurant[] = restaurants;
-
-        favRestaurants = favRestaurants.filter(
-            (restaurant: Restaurant): boolean => restaurant.liked
-        );
-
-        return favRestaurants;
-    }
-    const finalRestaurants = getFavorites();*/
     function updateFavs(restaurantName: string) {
         deleteFavs(restaurantName);
         updateSwitchOff(restaurantName);
@@ -32,7 +21,7 @@ export function FavoriteRestaurants({
     return (
         <div>
             <Container>
-                <div className="container">
+                <div className="favContainer">
                     {favoriteRestaurants.map((restaurant: Restaurant) => (
                         <div
                             key={restaurant.name}
