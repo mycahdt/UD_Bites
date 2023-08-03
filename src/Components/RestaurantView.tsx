@@ -90,7 +90,7 @@ export function RestaurantView({
             <div
                 className="border border-secondary"
                 style={{
-                    backgroundColor: "#E9D5AF",
+                    backgroundColor: "#dcc9b5",
                     borderRadius: "4px",
                     fontSize: "80%",
                     paddingTop: "7px",

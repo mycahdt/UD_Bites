@@ -36,6 +36,9 @@ function App(): JSX.Element {
         Restaurant[]
     >([]);
 
+    // State for displaying and hiding the favorites
+    const [visible, setVisible] = useState<boolean>(false);
+
     // Initialize the state for all filters
 
     // Location filters
@@ -185,17 +188,37 @@ function App(): JSX.Element {
                 </h4>
             </header>
             <Row>
-                <p>Favorites</p>
-                <FavoriteRestaurants
-                    favoriteRestaurants={favoriteRestaurants}
-                    deleteFavs={deleteFavs}
-                    updateSwitchOff={updateSwitchOff}
-                ></FavoriteRestaurants>
+                <div>
+                    <Button
+                        style={{
+                            marginBottom: "20px",
+                            backgroundColor: "#dcc9b5",
+                            color: "black",
+                            fontWeight: "bold",
+                            borderLeftColor: "black",
+                            borderTopColor: "black",
+                            borderRightColor: "black",
+                            borderBottomColor: "black"
+                        }}
+                        onClick={() => setVisible(!visible)}
+                    >
+                        Show/Hide Favorite Restaurants
+                    </Button>
+                    {visible && (
+                        <div style={{ marginBottom: "10px" }}>
+                            <FavoriteRestaurants
+                                favoriteRestaurants={favoriteRestaurants}
+                                deleteFavs={deleteFavs}
+                                updateSwitchOff={updateSwitchOff}
+                            ></FavoriteRestaurants>
+                        </div>
+                    )}
+                </div>
             </Row>
             <Row>
                 <Col xs={4}>
                     <div
-                        className="App-filters border border-secondary"
+                        className="App-filters border border-dark border-2"
                         style={{
                             position: "sticky",
                             top: "20px"
@@ -209,7 +232,7 @@ function App(): JSX.Element {
                         </h2>
                         <Row>
                             <Col>
-                                <div className="Location-filter border">
+                                <div className="Location-filter border border-secondary">
                                     <h5
                                         className="App-filter-subtitles"
                                         style={{
@@ -240,7 +263,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Price-filter border">
+                        <Row className="Price-filter border border-secondary">
                             <Col xs={2}>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -283,7 +306,7 @@ function App(): JSX.Element {
                                 </div>
                             </Col>
                         </Row>
-                        <Row className="Service-filter border">
+                        <Row className="Service-filter border border-secondary">
                             <Col>
                                 <div>
                                     <h5 className="App-filter-subtitles">
@@ -316,7 +339,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Meal-filter border">
+                            <Col className="Meal-filter border border-secondary">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Meal:
@@ -335,7 +358,7 @@ function App(): JSX.Element {
                                     ))}
                                 </div>
                             </Col>
-                            <Col className="Cuisine-filter border">
+                            <Col className="Cuisine-filter border border-secondary">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Cuisine Type:
@@ -356,7 +379,7 @@ function App(): JSX.Element {
                             </Col>
                         </Row>
                         <Row>
-                            <Col className="Food-filter border">
+                            <Col className="Food-filter border border-secondary">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Food:
@@ -375,7 +398,7 @@ function App(): JSX.Element {
                                     ))}
                                 </div>
                             </Col>
-                            <Col className="Drink-filter border">
+                            <Col className="Drink-filter border border-secondary">
                                 <div>
                                     <h5 className="App-filter-subtitles">
                                         Drinks:
@@ -416,7 +439,7 @@ function App(): JSX.Element {
                     </div>
                 </Col>
                 <Col xs={8}>
-                    <div className="App-restaurants border border-secondary">
+                    <div className="App-restaurants border border-dark border-2">
                         <h2
                             className="App-rest-title"
                             style={{ paddingTop: "10px" }}
